@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="css/style.css"/>
+    <title>Barter</title>
+  </head>
+    <body class="index">
+      <div class="body-wrapper">
+        <header class="page-header">
+          <nav class="page-header__navigation">
+            <div class="page-header__navigation-wrapper"><span class="page-header__logo-text">BARTER </span>
+              <ul class="page-header__menu">
+                <li class="page-header__menu-item"><a href="#">Объявления  </a></li>
+                <li class="page-header__menu-item"><a href="#">О проекте   </a></li>
+                <li class="page-header__menu-item"><a href="#">Помощь </a></li>
+              </ul><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="#icon-user"></use>
+                    </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a>
+              <button type="button" class="page-header__request-btn"> 
+                  <svg class="icon icon-plus ">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span>Подать объявление </span>
+              </button>
+            </div>
+          </nav>
+          <section class="page-header__search">
+            <div class="page-header__search-wrapper">
+              <form class="page-header__search-form">
+                <div class="page-header__search-controls-wrapper">
+                  <select id="category" name="category-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Категория</option>
+                    <option value="">Услуги и деятельность</option>
+                    <option value="">Товары для детей</option>
+                    <option value="">Мода и стиль</option>
+                    <option value="">Бытовая электроника</option>
+                    <option value="">Всё для дома и сада</option>
+                    <option value="">Продукты питания</option>
+                    <option value="">Транспорт</option>
+                    <option value="">Хобби, отдых и спорт</option>
+                  </select>
+                  <select id="poster" name="poster-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Поиск по объявлениям</option>
+                    <option value="">Услуги и деятельность</option>
+                    <option value="">Товары для детей</option>
+                  </select>
+                  <select id="location" name="location-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Вся Россия</option>
+                    <option value="">Москва</option>
+                    <option value="">Санкт-Петербург</option>
+                    <option value="">Казань</option>
+                  </select>
+                  <button class="page-header__search-form-btn">Найти</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </header>
+        <main class="index-main"></main>
+      </div>
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/component.selectfx.js"></script>
+        <script src="js/common.js"></script>
+    </body>
+</html>

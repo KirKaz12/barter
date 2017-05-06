@@ -1,0 +1,44 @@
+header.page-header
+	nav.page-header__navigation
+		.page-header__navigation-wrapper
+			span.page-header__logo-text BARTER 
+			ul.page-header__menu
+				li.page-header__menu-item
+					a(href="#") Объявления  
+				li.page-header__menu-item
+					a(href="#") О проекте   
+				li.page-header__menu-item
+					a(href="#") Помощь 
+			a.page-header__login-link(href="#") 
+				span.page-header__login-link-icon
+					+icon("user")
+				span.page-header__login-link-text Личный кабинет
+			button.page-header__request-btn(type="button") 
+				+icon("plus")
+				span Подать объявление 
+	section.page-header__search
+		.page-header__search-wrapper
+			form.page-header__search-form
+				.page-header__search-controls-wrapper
+					select#category.cs-select.cs-skin-border(name="category-search")
+						option(value="" disabled selected) Категория
+						option(value="") Услуги и деятельность
+						option(value="") Товары для детей
+						option(value="") Мода и стиль
+						option(value="") Бытовая электроника
+						option(value="") Всё для дома и сада
+						option(value="") Продукты питания
+						option(value="") Транспорт
+						option(value="") Хобби, отдых и спорт
+					select#poster.cs-select.cs-skin-border(name="poster-search")
+						option(value="" disabled selected) Поиск по объявлениям
+						option(value="") Услуги и деятельность
+						option(value="") Товары для детей
+					select#location.cs-select.cs-skin-border(name="location-search")
+						option(value="" disabled selected) Вся Россия
+						option(value="") Москва
+						option(value="") Санкт-Петербург
+						option(value="") Казань
+					button.page-header__search-form-btn Найти
+
+
