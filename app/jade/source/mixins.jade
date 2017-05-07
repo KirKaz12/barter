@@ -21,3 +21,18 @@ mixin body(name)
 		block scripts
 			+script("js/common.js")
 
+mixin poster(img,header,category,city,day,hours,mins,price,count)
+	li.poster-item
+		.poster-wrapper
+			.poster-logo
+				img(src="img/main/"+img+".jpg")
+			.poster-details
+				h3.poster-header #{header}
+				a(href="#").poster-category #{category}
+				a(href='#').poster-city #{city}
+				p.poster-date #[span.day #{day} ] #[span.hours #{hours}]:#[span.mins #{mins}] 
+			.poster-price-block
+				p.poster-price #[span.price #{price}] руб.
+				p.poster-count Количество: #[span.item-count #{count}]
+				a(href="#").poster-btn Готов меняться
+

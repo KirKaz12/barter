@@ -89,10 +89,7 @@ gulp.task('jsminify', function() {
 
 //Сжатие библиотек
 gulp.task('libminify', function() {
-    return gulp.src([
-        'app/libs/jquery-2.2.1.min.js',
-        'app/libs/slick.min.js'
-        ]) 
+    return gulp.src('app/libs/*.js') 
         .pipe(concat('libs.min.js')) 
         .pipe(uglify()) 
         .pipe(gulp.dest('dist/js'));

@@ -1,7 +1,7 @@
 header.page-header
 	nav.page-header__navigation
 		.page-header__navigation-wrapper
-			span.page-header__logo-text BARTER 
+			a(href="#").page-header__logo-text BARTER 
 			ul.page-header__menu
 				li.page-header__menu-item
 					a(href="#") Объявления  
@@ -40,5 +40,12 @@ header.page-header
 						option(value="") Санкт-Петербург
 						option(value="") Казань
 					button.page-header__search-form-btn Найти
+				.page-header__options-wrapper
+					label(for="headers")
+						input#headers(type="checkbox")
+						span Искать по заголовкам
+					label(for="photo")
+						input#photo(type="checkbox")
+						span Только с фото
 
 

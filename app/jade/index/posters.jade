@@ -1,0 +1,27 @@
+section.posters
+	.posters__wrapper
+		.posters__header-wrapper
+			h2 Все объявления
+			select#sort.cs-select.cs-skin-border(name="sorting")
+				option(value="" disabled selected) По умолчанию
+				option(value="") По цене
+				option(value="") По дате добавления
+		ul.posters__list
+			+poster("car","Mercedes-Benz 170 2001","Транспорт","Москва","Сегодня","21","00","370 000","1 шт.")
+			+poster("tablet","Новый смартфон Sony Xperia Z3 compact","Телефоны","Казань","24 апреля","12","56","14 000","1 шт.")
+			+poster("bed","Шикарное постельное белье премиум класса","Предметы интерьера","Санкт-Петербург","23 апреля","10","34","1450","5 шт.")
+			+poster("keds","Бордовые кеды Vans old school","Обувь и одежда","Ижевск","22 апреля","20","11","3600","1 шт.")
+			+poster("constructor","Натяжные потолки от производителя за 1 день","Обслуживание и ремонт","Челябинск","21 апреля","09","15","7000","не ограничено")
+			+poster("caviar","Имитированая красная и черная икра (цена за 0.5кг)","Продукты питания","Новосибирск","20 апреля","01","55","800","8 кг.")
+		.posters__pagination-wrapper
+			.pagination
+				a(href="#" data-item="pagination").pagination-link.pagination-link_active 1
+				a(href="#" data-item="pagination").pagination-link 2
+				a(href="#" data-item="pagination").pagination-link 3
+				a(href="#" data-item="pagination").pagination-link 4
+				a(href="#" data-item="pagination").pagination-link 5
+				a(href="#").pagination-link ...
+				a(href="#" data-item="pagination").pagination-link 20
+			.pagination-next
+				a(href="#") Следующая стр.
+					+icon("arrow-right")

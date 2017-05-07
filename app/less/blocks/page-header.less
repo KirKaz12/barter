@@ -56,7 +56,9 @@
 		}
 	}
 	&__request-btn {
-		//margin-left: auto;
+		&:hover {
+			background-color: #1934c9;
+		}
 		min-height: 44px;
 		width: 207px;
 		border-radius: 6px;
@@ -82,6 +84,129 @@
 		&-wrapper {
 			.wrapper(1200px);
 			padding: 0 16px;
+		}
+		&-controls-wrapper {
+			display: flex;
+		}
+		&-form-btn {
+			order: 4;
+			width: 90px;
+			min-height: 44px;
+			text-overflow: ellipsis;
+			background-color: @red;
+			border-radius: 0 6px 6px 0;
+			font-size: 14px;
+			line-height: 24px;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				background-color: #d21f41;
+			}
+		}
+	}
+	.cs-skin-border {
+		ul {
+			padding: 0 10px;
+			span {
+				padding: 0;
+				text-indent: 10px;
+				&:hover {
+					color: #fff;
+					background-color: @blue;
+				}
+			}
+		}
+		&:nth-of-type(1) {
+			width: 277px;
+			.cs-placeholder {
+				border-radius: 6px 0 0 6px;
+				border-right: none;
+				padding-left: 22px;
+			}
+		}
+		&:nth-of-type(2) {
+			width: 496px;
+			.cs-placeholder {
+				border-right: none;
+				padding-left: 18px;
+			}
+		}
+		&:nth-of-type(3) {
+			width: 306px;
+			.cs-placeholder {
+				border-right: none;
+				padding-left: 17px;
+			}
+		}
+		.cs-selected {
+			span:after {
+				display: none;
+			}
+		}
+		.cs-placeholder {
+			padding: 0;
+			border: 2px solid #e6e6e6;
+			padding: 7px 20px;
+			padding-bottom: 8px;
+			&:after {
+				content: "";
+				background-image: url(../img/svg/arrow-down.svg);
+				background-repeat: no-repeat;
+				display: block;
+				width: 10px;
+				height: 10px;
+				top: 56%;
+		    transform: translate(-5px,-50%);
+			}
+		}
+		.cs-options {
+			margin-top: 3px;
+			border: 2px solid #e6e6e6;
+			box-shadow: 0 0 30px #cdcdcd;
+			color: #000;
+			font-size: 13px;
+			line-height: 29px;
+		}
+		.cs-active  {
+			.cs-placeholder {
+				color: @blue !important;
+			}
+		}
+	}
+	div.cs-skin-border {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	&__options-wrapper {
+		padding-top: 18px;
+		label {
+			margin-right: 23px;
+			cursor: pointer;
+		}
+		input {
+			display: none;
+			&:checked + span:before {
+				background-color: @blue;
+				background-image: url(../img/svg/check_icon.svg);
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+		span {
+			padding-left: 31px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				width: 18px;
+				height: 18px;
+				background-color: white;
+				border: 2px solid #e6e6e6;
+				border-radius: 6px;
+			}
 		}
 	}
 }

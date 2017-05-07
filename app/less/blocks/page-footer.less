@@ -1,0 +1,75 @@
+.page-footer {
+	padding-top: 38px;
+	padding-bottom: 30px;
+	background-color: #f4f4f7;
+	&__wrapper {
+		.wrapper(1200px);
+		padding: 0 16px;
+	}
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 45px;
+		&-item {
+			width: 25%;
+			a {
+				color: @grey;
+				&:hover {
+					color: @blue;
+				}
+			}
+			&:nth-child(2),
+			&:nth-child(6),
+			&:nth-child(10) {
+				a {
+					padding-left: 6px;
+				}
+			}
+			&:nth-child(3),
+			&:nth-child(7),
+			&:nth-child(11) {
+				a {
+					padding-left: 9px;
+				}
+			}
+			&:nth-child(4),
+			&:nth-child(8),
+			&:nth-child(12) {
+				a {
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	&__navigation {
+		padding: 26px 121px;
+		border-top: 1px solid #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		margin-bottom: 31px;
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&-item {
+			font-size: 15px;
+			font-weight: 700;
+			a {
+				&:hover {
+					color: #666;
+				}
+			}
+		}
+	}
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		font-size: 12px;
+		color: @grey;
+	}
+	&__it-construction {
+		display: block;
+		color: inherit;
+	}
+}

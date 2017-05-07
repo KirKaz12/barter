@@ -1,11 +1,12 @@
 'use strict';
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 /*localStorage.removeItem( 'inlineSVGdata' );
 localStorage.removeItem( 'inlineSVGrev',);*/
 ;(function (window, document) {
 	'use strict';
 
-	console.log('let');
 	var file = 'img/svg_sprite.html',
 	    revision = 1;
 
@@ -45,3 +46,18 @@ localStorage.removeItem( 'inlineSVGrev',);*/
 		request.send();
 	} catch (e) {}
 })(window, document);
+
+var SelectFX = window.SelectFX;
+window.addEventListener('load', function () {
+	var selectElements = document.querySelectorAll('select.cs-select');
+	for (var x in selectElements) {
+		if (_typeof(selectElements[x]) === 'object') {
+			new SelectFX(selectElements[x]);
+		}
+	};
+}, false);
+
+$("[data-item='pagination']").on("click", function (e) {
+	$(this).addClass("pagination-link_active");
+	$(this).siblings("[data-item='pagination']").removeClass("pagination-link_active");
+});

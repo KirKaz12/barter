@@ -3,7 +3,6 @@ localStorage.removeItem( 'inlineSVGrev',);*/
 ;( function( window, document )
 {
 	'use strict';
-	console.log('let')
 	var file     = 'img/svg_sprite.html',
 			revision = 1;
 
@@ -55,3 +54,21 @@ localStorage.removeItem( 'inlineSVGrev',);*/
 	catch( e ){}
 
 }( window, document ) );
+
+
+let SelectFX = window.SelectFX;
+window.addEventListener('load', function() {
+  var selectElements = document.querySelectorAll('select.cs-select');
+  for (var x in selectElements) {
+    if (typeof selectElements[x] === 'object') {
+      new SelectFX(selectElements[x]);
+    }
+  };
+}, false);
+
+$("[data-item='pagination']").on("click", function(e) {
+	$(this).addClass("pagination-link_active");
+	$(this).siblings("[data-item='pagination']")
+					.removeClass("pagination-link_active");
+});
+        
