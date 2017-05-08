@@ -1758,6 +1758,7 @@ button:active {
   top: 8px;
 }
 .posters__list .poster-item {
+  position: relative;
   border: 1px solid #e6e6e6;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -1798,12 +1799,19 @@ button:active {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+.posters__list .poster-link {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
 }
 .posters__list .poster-logo {
   margin-right: 75px;
-}
-.posters__list .poster-logo a {
-  display: inline-block;
 }
 .posters__list .poster-details {
   padding-top: 9px;
@@ -1818,12 +1826,16 @@ button:active {
   display: block;
   color: #3d5afe;
   line-height: 22px;
+  position: relative;
+  z-index: 2;
 }
 .posters__list .poster-city,
 .posters__list .poster-date {
   font-size: 12px;
   line-height: 13px;
   color: #818181;
+  position: relative;
+  z-index: 2;
 }
 .posters__list .poster-price-block {
   margin-left: auto;

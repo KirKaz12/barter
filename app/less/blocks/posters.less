@@ -16,6 +16,7 @@
 	}
 	&__list {
 		.poster-item {
+			position: relative;
 			border: 1px solid #e6e6e6;
 			margin-bottom: 20px;
 			padding-top: 20px;
@@ -54,13 +55,20 @@
 		}
 		.poster-wrapper {
 			display: flex;
+			position: relative;
 			//justify-content: space-between;
+		}
+		.poster-link {
+			position: absolute;
+			height: 100%;
+			width: 50%;
+			top: 0;
+			left: 0;
+			display: block;
+			z-index: 1;
 		}
 		.poster-logo {
 			margin-right: 75px;
-			a {
-				display: inline-block;
-			}
 		}
 		.poster-details {
 	    padding-top: 9px;
@@ -75,12 +83,16 @@
 			display: block;
 			color: @blue;
 			line-height: 22px;
+			position: relative;
+			z-index: 2;
 		}
 		.poster-city,
 		.poster-date {
 			font-size: 12px;
 			line-height: 13px;
 			color: @grey;
+			position: relative;
+			z-index: 2;
 		}
 		.poster-price-block {
 			margin-left: auto;

@@ -23,13 +23,12 @@ mixin body(name)
 
 mixin poster(img,header,category,city,day,hours,mins,price,count)
 	li.poster-item
+		a(href="#").poster-link
 		.poster-wrapper
 			.poster-logo
-				a(href="#")
-					img(src="img/main/"+img+".jpg")
+				img(src="img/main/"+img+".jpg")
 			.poster-details
-				h3.poster-header 
-					a(href="#") #{header}
+				h3.poster-header #{header}
 				a(href="#").poster-category #{category}
 				a(href='#').poster-city #{city}
 				p.poster-date #[span.day #{day} ] #[span.hours #{hours}]:#[span.mins #{mins}] 
