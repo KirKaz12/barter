@@ -1802,6 +1802,9 @@ button:active {
 .posters__list .poster-logo {
   margin-right: 75px;
 }
+.posters__list .poster-logo a {
+  display: inline-block;
+}
 .posters__list .poster-details {
   padding-top: 9px;
   padding-left: 4px;

@@ -25,9 +25,11 @@ mixin poster(img,header,category,city,day,hours,mins,price,count)
 	li.poster-item
 		.poster-wrapper
 			.poster-logo
-				img(src="img/main/"+img+".jpg")
+				a(href="#")
+					img(src="img/main/"+img+".jpg")
 			.poster-details
-				h3.poster-header #{header}
+				h3.poster-header 
+					a(href="#") #{header}
 				a(href="#").poster-category #{category}
 				a(href='#').poster-city #{city}
 				p.poster-date #[span.day #{day} ] #[span.hours #{hours}]:#[span.mins #{mins}] 
