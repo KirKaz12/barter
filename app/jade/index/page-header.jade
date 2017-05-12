@@ -1,18 +1,34 @@
 header.page-header
 	nav.page-header__navigation
 		.page-header__navigation-wrapper
-			a(href="#").page-header__logo-text BARTER 
-			ul.page-header__menu
-				li.page-header__menu-item
-					a(href="#") Объявления  
-				li.page-header__menu-item
-					a(href="#") О проекте   
-				li.page-header__menu-item
-					a(href="#") Помощь 
-			a.page-header__login-link(href="#") 
-				span.page-header__login-link-icon
-					+icon("user")
-				span.page-header__login-link-text Личный кабинет
+			button(type="button" data-burger-btn="").page-header__burger
+			a(href="#").page-header__logo-text BARTER
+			.page-header__menu-wrapper(data-burger-menu="")
+				.page-header__menu-controls-wrapper
+					button(type="button" data-close-btn="").page-header__close-btn
+						+icon("arrow-right")
+					ul.page-header__menu
+						li.page-header__menu-item
+							a(href="#") Объявления  
+						li.page-header__menu-item
+							a(href="#") О проекте   
+						li.page-header__menu-item
+							a(href="#") Помощь
+					ul.page-header__user-menu
+						li.page-header__user-menu-item
+							a(href="#") Я продаю  
+						li.page-header__user-menu-item
+							a(href="#") Хочу купить  
+						li.page-header__user-menu-item
+							a(href="#") Сообщения
+						li.page-header__user-menu-item
+							a(href="#") Редактировать профиль
+						li.page-header__user-menu-item
+							a(href="#") Выход
+					a.page-header__login-link(href="#") 
+						span.page-header__login-link-icon
+							+icon("user")
+						span.page-header__login-link-text Личный кабинет
 			button.page-header__request-btn(type="button") 
 				+icon("plus")
 				span Подать объявление 

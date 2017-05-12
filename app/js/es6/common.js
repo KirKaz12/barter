@@ -1,5 +1,5 @@
 /*localStorage.removeItem( 'inlineSVGdata' );
-localStorage.removeItem( 'inlineSVGrev',);*/
+localStorage.removeItem( 'inlineSVGrev');*/
 ;( function( window, document )
 {
 	'use strict';
@@ -70,5 +70,17 @@ $("[data-item='pagination']").on("click", function(e) {
 	$(this).addClass("pagination-link_active");
 	$(this).siblings("[data-item='pagination']")
 					.removeClass("pagination-link_active");
+});
+
+let burgerButton = $("[data-burger-btn]");
+let burgerMenu = $("[data-burger-menu]");
+let closeButton = $("[data-close-btn]");
+
+burgerButton.on("click", ()=>{
+	$(burgerMenu).addClass("page-header__menu-wrapper_visible");
+});
+
+closeButton.on("click", ()=>{
+	$(burgerMenu).removeClass("page-header__menu-wrapper_visible");
 });
         

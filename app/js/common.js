@@ -3,7 +3,7 @@
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*localStorage.removeItem( 'inlineSVGdata' );
-localStorage.removeItem( 'inlineSVGrev',);*/
+localStorage.removeItem( 'inlineSVGrev');*/
 ;(function (window, document) {
 	'use strict';
 
@@ -60,4 +60,16 @@ window.addEventListener('load', function () {
 $("[data-item='pagination']").on("click", function (e) {
 	$(this).addClass("pagination-link_active");
 	$(this).siblings("[data-item='pagination']").removeClass("pagination-link_active");
+});
+
+var burgerButton = $("[data-burger-btn]");
+var burgerMenu = $("[data-burger-menu]");
+var closeButton = $("[data-close-btn]");
+
+burgerButton.on("click", function () {
+	$(burgerMenu).addClass("page-header__menu-wrapper_visible");
+});
+
+closeButton.on("click", function () {
+	$(burgerMenu).removeClass("page-header__menu-wrapper_visible");
 });
