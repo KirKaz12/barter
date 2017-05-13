@@ -68,8 +68,10 @@ var closeButton = $("[data-close-btn]");
 
 burgerButton.on("click", function () {
 	$(burgerMenu).addClass("page-header__menu-wrapper_visible");
+	$("body").css("overflowY", "hidden");
 });
 
 closeButton.on("click", function () {
 	$(burgerMenu).removeClass("page-header__menu-wrapper_visible");
+	$("body").css("overflowY", "visible");
 });

@@ -104,6 +104,9 @@
 		.poster-count {
 			color: @grey;
 		}
+		.count-small {
+			display: none;
+		}
 		.poster-price-block {
 	    padding-top: 8px;
 		}
@@ -259,14 +262,6 @@
 				}
 			}
 		}
-/* 		&__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	.poster-item {
-		width: 47%;
-	}
-} */
 	}
 }
 
@@ -332,7 +327,9 @@
 		&__list {
 			.poster-wrapper {
 				flex-wrap: wrap;
-				padding-left: 7.5%;
+				padding-left: 0;
+		    width: 85%;
+		    margin: 0 auto;
 			}
 			.poster-item {
 				padding-right: 0;
@@ -358,15 +355,15 @@
 			}
 			.poster-logo {
 				width: 100%;
-				margin: 0 auto;
+				margin: 0;
 				img {
-					width: 238px;
+					width: 100%;
 				}
 			}
 			.poster-details {
 				padding-left: 0;
 				width: 100%;
-				max-width: 238px !important;
+				//max-width: 238px !important;
 				h3 {
 					font-size: 16px;
 					line-height: 21px;
@@ -380,8 +377,7 @@
 			.poster-price-block {
 				padding-top: 3px;
 				margin-left: 0;
-				//width: 85%;
-				max-width: 238px;
+				width: 100%;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
@@ -395,8 +391,14 @@
 				width: 50%;
 				order: 1;
 			}
+			.count-small {
+				display: inline;
+			}
+			.count-big {
+				display: none;
+			}
 			.poster-btn {
-				width: 238px;
+				width: 100%;
 				order: 3;
 			}
 		}

@@ -34,6 +34,6 @@ mixin poster(img,header,category,city,day,hours,mins,price,count)
 				p.poster-date #[span.day #{day} ] #[span.hours #{hours}]:#[span.mins #{mins}] 
 			.poster-price-block
 				p.poster-price #[span.price #{price}] руб.
-				p.poster-count Количество: #[span.item-count #{count}]
+				p.poster-count #[span.count-big Количество:] #[span.count-small Кол-во:] #[span.item-count #{count}]
 				a(href="#").poster-btn Готов меняться
 

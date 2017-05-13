@@ -78,9 +78,11 @@ let closeButton = $("[data-close-btn]");
 
 burgerButton.on("click", ()=>{
 	$(burgerMenu).addClass("page-header__menu-wrapper_visible");
+	$("body").css("overflowY", "hidden");
 });
 
 closeButton.on("click", ()=>{
 	$(burgerMenu).removeClass("page-header__menu-wrapper_visible");
+	$("body").css("overflowY", "visible");
 });
         

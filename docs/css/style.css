@@ -1903,22 +1903,22 @@ button:active {
     height: 14px;
   }
   .page-header__menu-wrapper {
-    position: absolute;
+    position: fixed;
     display: block;
     left: 0;
     top: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: #333;
     z-index: 1000;
     will-change: transform;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.17, 0.11, 0.71, 0.19);
-    transition: -webkit-transform 0.5s cubic-bezier(0.17, 0.11, 0.71, 0.19);
-    transition: transform 0.5s cubic-bezier(0.17, 0.11, 0.71, 0.19);
-    transition: transform 0.5s cubic-bezier(0.17, 0.11, 0.71, 0.19), -webkit-transform 0.5s cubic-bezier(0.17, 0.11, 0.71, 0.19);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.89, 0, 1.01);
+    transition: -webkit-transform 0.5s cubic-bezier(0, 0.89, 0, 1.01);
+    transition: transform 0.5s cubic-bezier(0, 0.89, 0, 1.01);
+    transition: transform 0.5s cubic-bezier(0, 0.89, 0, 1.01), -webkit-transform 0.5s cubic-bezier(0, 0.89, 0, 1.01);
   }
   .page-header__menu-wrapper_visible {
     -webkit-transform: translateX(0);
@@ -1972,7 +1972,7 @@ button:active {
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: 83.125%;
-    height: 100vh;
+    height: 120vh;
     background-color: #fff;
   }
   .page-header__menu-item:not(:last-child) {
@@ -2266,6 +2266,9 @@ button:active {
 .posters__list .poster-count {
   color: #818181;
 }
+.posters__list .count-small {
+  display: none;
+}
 .posters__list .poster-price-block {
   padding-top: 8px;
 }
@@ -2397,16 +2400,6 @@ button:active {
   top: 2.5px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .posters {
-    /* 		&__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	.poster-item {
-		width: 47%;
-	}
-} */
-  }
   .posters__wrapper {
     width: 92.5%;
     max-width: 900px;
@@ -2513,7 +2506,9 @@ button:active {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    padding-left: 7.5%;
+    padding-left: 0;
+    width: 85%;
+    margin: 0 auto;
   }
   .posters__list .poster-item {
     padding-right: 0;
@@ -2535,15 +2530,14 @@ button:active {
   }
   .posters__list .poster-logo {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
   }
   .posters__list .poster-logo img {
-    width: 238px;
+    width: 100%;
   }
   .posters__list .poster-details {
     padding-left: 0;
     width: 100%;
-    max-width: 238px !important;
   }
   .posters__list .poster-details h3 {
     font-size: 16px;
@@ -2557,7 +2551,7 @@ button:active {
   .posters__list .poster-price-block {
     padding-top: 3px;
     margin-left: 0;
-    max-width: 238px;
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2585,8 +2579,14 @@ button:active {
         -ms-flex-order: 1;
             order: 1;
   }
+  .posters__list .count-small {
+    display: inline;
+  }
+  .posters__list .count-big {
+    display: none;
+  }
   .posters__list .poster-btn {
-    width: 238px;
+    width: 100%;
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
         -ms-flex-order: 3;
