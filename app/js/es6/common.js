@@ -1,5 +1,5 @@
-/*localStorage.removeItem( 'inlineSVGdata' );
-localStorage.removeItem( 'inlineSVGrev');*/
+localStorage.removeItem( 'inlineSVGdata' );
+localStorage.removeItem( 'inlineSVGrev');
 ;( function( window, document )
 {
 	'use strict';
