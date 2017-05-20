@@ -1,0 +1,55 @@
+section.item-card
+	.item-card__wrapper
+		.breadcrumbs
+			a.breadcrumbs__link(href="#") Все объявления в Казани  
+			a.breadcrumbs__link(href="#")  Услуги и деятельность
+			a.breadcrumbs__link(href="#") Аренда автомобиля Audi Q7
+		.item-card__header
+			h2 Аренда автомобиля Audi Q7
+		.item-card__info
+			span.item-card__info-location Казань
+			span.item-card__info-date 20 апреля 15:30
+			span.item-card__info-watches 18
+			a.item-card__info-print(href="#") Печать
+		.item-card__good
+			.item-card__good-main
+				.item-card__good-gallery
+					.item-card__good-small-photos
+						img.item-card__good-small-photos_active(src="img/item/audi_main.jpg", alt=" ")
+						img(src="img/item/audi_exterior.jpg", alt=" ")
+						img(src="img/item/audi_inside.jpg", alt=" ")
+					.item-card__good-main-photo
+						img(src="img/item/audi_main.jpg", alt=" ")
+						.expand-btn
+							+icon("fullscreen")
+				.item-card__good-description
+					h3 Описание
+					p Прокат Audi Q7 в Казани с водителем 1750 р./час по городу.#[br] Аренда автомобиля представительского класса с водителем в Казани.#[br] Audi Q7 чёрного цвета в длинной базе, панорамная крыша, шторки, мониторы в подголовниках, сидения с массажем и т.д.#[br] Трансфер в аэропорт Москвы. Деловые поездки по РТ.
+					a.item-card__good-expand(href="#") Читать далее
+			.item-card__good-details
+				.item-card__good-price
+					p 1 700 руб.
+					span / 1 час
+					a.item-card__good-order(href="#") Готов меняться
+				.item-card__good-owner
+					.item-card__good-owner-main
+						.item-card__good-owner-avatar
+							img(src="img/pushkin.jpg", alt=" ")
+						.item-card__good-owner-info
+							p.item-card__good-owner-name Александр Пушкин
+							span.item-card__good-owner-details Частное лицо
+					.item-card__good-owner-details
+						p.item-card__good-owner-number Тел: +7 (917) 850-12-19
+						button.item-card__good-owner-message-btn(type="button") Написать сообщение
+						a.item-card__good-owner-report(href="#") Пожаловаться
+		.item-card__share
+			p Рассказать друзьям:
+			.item-card__share-socials
+				a(href="#").item-card__share-socials-vk
+					+icon("vk")
+				a(href="#").item-card__share-socials-fb
+					+icon("fb")
+				a(href="#").item-card__share-socials-twitter
+					+icon("twitter")
+				a(href="#").item-card__share-socials-ok
+					+icon("ok")

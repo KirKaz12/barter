@@ -1,0 +1,19 @@
+extends source/page-template
+
+block styles
+	+link("css/magnific-popup")
+	+link("css/style")
+block title
+	title Item_card
+block body
+	+body("item_card")
+block content
+	include item_card/page-header
+	main(class="item_card-main")
+		include item_card/item_card_content
+	include item_card/page-footer
+block scripts
+	+script("libs/jquery.min.js")
+	+script("libs/component.selectfx.js")
+	+script("libs/jquery.magnific-popup.min.js")
+	+script("js/common.js")

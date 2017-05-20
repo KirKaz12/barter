@@ -1,0 +1,17 @@
+extends source/page-template
+
+block styles
+	+link("css/style")
+block title
+	title Items_list
+block body
+	+body("items_list")
+block content
+	include items_list/page-header
+	main(class="items_list-main")
+		include items_list/items_list_content
+	include items_list/page-footer
+block scripts
+	+script("libs/jquery.min.js")
+	+script("libs/component.selectfx.js")
+	+script("js/common.js")

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="css/style.css"/>
+    <title>Items_list</title>
+  </head>
+    <body class="items_list">
+      <div class="body-wrapper">
+        <header class="page-header">
+          <nav class="page-header__navigation">
+            <div class="page-header__navigation-wrapper">
+              <button type="button" data-burger-btn="" class="page-header__burger"></button><a href="#" class="page-header__logo-text">BARTER</a>
+              <div data-burger-menu="" class="page-header__menu-wrapper">
+                <div class="page-header__menu-controls-wrapper">
+                  <button type="button" data-close-btn="" class="page-header__close-btn">
+                      <svg class="icon icon-arrow-left ">
+                        <use xlink:href="#icon-arrow-left"></use>
+                      </svg>
+                  </button>
+                  <ul class="page-header__menu">
+                    <li class="page-header__menu-item"><a href="#">Объявления  </a></li>
+                    <li class="page-header__menu-item"><a href="#">О проекте   </a></li>
+                    <li class="page-header__menu-item"><a href="#">Помощь</a></li>
+                  </ul>
+                  <ul class="page-header__user-menu">
+                    <li class="page-header__user-menu-item"><a href="#">Я продаю  </a></li>
+                    <li class="page-header__user-menu-item"><a href="#">Хочу купить  </a></li>
+                    <li class="page-header__user-menu-item"><a href="#">Сообщения</a></li>
+                    <li class="page-header__user-menu-item"><a href="#">Редактировать профиль</a></li>
+                    <li class="page-header__user-menu-item"><a href="#">Выход</a></li>
+                  </ul><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
+                        <svg class="icon icon-user ">
+                          <use xlink:href="#icon-user"></use>
+                        </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a>
+                </div>
+              </div>
+              <button type="button" class="page-header__request-btn"> 
+                  <svg class="icon icon-plus ">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span>Подать объявление </span>
+              </button>
+            </div>
+          </nav>
+          <section class="page-header__search">
+            <div class="page-header__search-wrapper">
+              <form class="page-header__search-form">
+                <div class="page-header__search-controls-wrapper">
+                  <select id="category" name="category-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Категория</option>
+                    <option value="">Услуги и деятельность</option>
+                    <option value="">Товары для детей</option>
+                    <option value="">Мода и стиль</option>
+                    <option value="">Бытовая электроника</option>
+                    <option value="">Всё для дома и сада</option>
+                    <option value="">Продукты питания</option>
+                    <option value="">Транспорт</option>
+                    <option value="">Хобби, отдых и спорт</option>
+                  </select>
+                  <select id="poster" name="poster-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Поиск по объявлениям</option>
+                    <option value="">Услуги и деятельность</option>
+                    <option value="">Товары для детей</option>
+                  </select>
+                  <select id="location" name="location-search" class="cs-select cs-skin-border">
+                    <option value="" disabled="disabled" selected="selected">Вся Россия</option>
+                    <option value="">Москва</option>
+                    <option value="">Санкт-Петербург</option>
+                    <option value="">Казань</option>
+                  </select>
+                  <button class="page-header__search-form-btn">Найти</button>
+                </div>
+                <div class="page-header__options-wrapper">
+                  <label for="headers">
+                    <input id="headers" type="checkbox"/><span>Искать по заголовкам</span>
+                  </label>
+                  <label for="photo">
+                    <input id="photo" type="checkbox"/><span>Только с фото</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </section>
+        </header>
+        <main class="items_list-main"></main>
+        <footer class="page-footer">
+          <div class="page-footer__wrapper">
+            <ul class="page-footer__menu">
+              <li class="page-footer__menu-item"><a href="#">Недвижимость</a></li>
+              <li class="page-footer__menu-item"><a href="#"> Услуги и деятельность</a></li>
+              <li class="page-footer__menu-item"><a href="#"> Бытовая электроника	</a></li>
+              <li class="page-footer__menu-item"><a href="#">Хобби, отдых и спорт</a></li>
+              <li class="page-footer__menu-item"><a href="#">Транспорт </a></li>
+              <li class="page-footer__menu-item"><a href="#">Товары для детей</a></li>
+              <li class="page-footer__menu-item"><a href="#">Все для дома и сада</a></li>
+              <li class="page-footer__menu-item"><a href="#">Животные</a></li>
+              <li class="page-footer__menu-item"><a href="#">Бизнес</a></li>
+              <li class="page-footer__menu-item"><a href="#">Мода и стиль</a></li>
+              <li class="page-footer__menu-item"><a href="#"> Продукты питания</a></li>
+              <li class="page-footer__menu-item"><a href="#">Отдам даром</a></li>
+            </ul>
+            <nav class="page-footer__navigation">
+              <ul class="page-footer__navigation-list">
+                <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">Подать объявление   </a></li>
+                <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">О проекте </a></li>
+                <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">Объявления </a></li>
+                <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">Помощь</a></li>
+                <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">Личный кабинет</a></li>
+              </ul>
+            </nav>
+            <div class="page-footer__info">
+              <p class="page-footer__company-name">© 2017 Barter — Сервис по обмену вещами и услугами</p><a href="#" class="page-footer__it-construction">Сделано в IT-Construction </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/component.selectfx.js"></script>
+        <script src="js/common.js"></script>
+    </body>
+</html>
