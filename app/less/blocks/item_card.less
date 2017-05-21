@@ -4,26 +4,6 @@
 		.wrapper(1200px);
 		padding: 0 16px;
 	}
-	.breadcrumbs {
-		font-size: 12px;
-		color: @grey;
-		margin-bottom: 23px;
-		&__link {
-			position: relative;
-			padding-right: 23px;
-			&:not(:last-child){
-				&::after {
-					position: absolute;
-					content: "/";
-					display: inline-block;
-					right: 10px;
-					vertical-align: middle;
-					top: 0;
-			    line-height: 17px;
-				}
-			}
-		}
-	}
 	&__header {
 		margin-bottom: 38px;
 		h2 {
@@ -69,7 +49,7 @@
 		}
 		&-watches {
 			position: relative;
-			padding-left: 28px;
+			padding-left: 25px;
 			&::before {
 				content: '';
 				position: absolute;
@@ -215,7 +195,7 @@
 			color: #fff;
 			background-color: @red;
 			border-radius: 6px;
-			line-height: 44px;
+			line-height: 43px;
 			margin: 18px auto;
 			margin-bottom: 0;
 			&:hover {
@@ -365,5 +345,106 @@ body.item_card .page-footer {
 }
 .mfp-bg {
 	opacity: .95;
+}
+
+	.breadcrumbs {
+		font-size: 12px;
+		color: @grey;
+		margin-bottom: 23px;
+		&__link {
+			position: relative;
+			padding-right: 20px;
+			&:not(:last-child){
+				&::after {
+					position: absolute;
+					content: "/";
+					display: inline-block;
+					right: 10px;
+					vertical-align: middle;
+					top: 0;
+			    line-height: 17px;
+				}
+			}
+		}
+	}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+	.item-card {
+		&__wrapper {
+			width: 92.5%;
+	    max-width: 900px;
+		}
+		&__good {
+			&-main {
+				padding-right: 10px;
+				padding-left: 10px;
+				&-photo {
+					float: none;
+					width: 100%;
+					height: 300px;
+					img {
+						display: block;
+						margin: 0 auto;
+						max-width: 500px;
+					}
+				}
+			}
+			&-small-photos {
+				float: none;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 15px;
+				img {
+					margin-bottom: 0;
+					width: calc((100% - 10px)/3);
+					max-width: 150px;
+					height: 95px;
+					&:not(:last-child){
+						margin-bottom: 0;
+					}
+				}
+			}
+			&-description {
+				padding-top: 20px;
+				p {
+					font-size: 13px;
+					line-height: 21px;
+				}
+			}
+			&-order {
+				max-width: 90%;
+			}
+			&-owner {
+				padding-right: 10px;
+				padding-left: 10px;
+				&-main {
+					display: block;
+				}
+				&-avatar {
+					margin-right: auto;
+					margin-left: auto;
+					text-align: center;
+				}
+				&-name {
+					font-size: 16px;
+				}
+				&-info {
+					margin-right: auto;
+					margin-left: auto;
+					text-align: center;
+				}
+				&-message-btn {
+					max-width: 90%;
+				}
+				&-number {
+					font-size: 14px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
 }
 

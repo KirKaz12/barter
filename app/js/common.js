@@ -84,12 +84,15 @@ $(document).ready(function () {
 		$("#icon-fullscreen").removeClass("fullscreen_hover");
 	});
 	var mainPhotoSource = $(".item-card__good-main-photo img").attr("src");
-	$('.expand-btn').magnificPopup({
-		items: {
-			src: mainPhotoSource
-		},
-		type: 'image' // this is default type
-	});
+	var callPopUp = function callPopUp() {
+		if ($.magnificPopup) {
+			$('.expand-btn').magnificPopup({
+				items: {
+					src: mainPhotoSource
+				},
+				type: 'image' });
+		}
+	};
 
 	var Gallery = function Gallery(mainItem, galleryList, galleryImages) {
 		this._mainItem = $("." + mainItem);
@@ -116,12 +119,13 @@ $(document).ready(function () {
 				$(e.target).siblings("img").each(function (index, elem) {
 					$(elem).removeClass("item-card__good-small-photos_active");
 				});
-				$('.expand-btn').magnificPopup({
-					items: {
-						src: source
-					},
-					type: 'image' // this is default type
-				});
+				/*$('.expand-btn').magnificPopup({
+       items: {
+         src: source
+       },
+       type: 'image' // this is default type
+    });*/
+				callPopUp();
 				that._mainItem.animate({ "opacity": "1" }, 500);
 			}
 		});
