@@ -1,50 +1,50 @@
 .page-footer {
-	padding-top: 38px;
+	padding-top: 34px;
 	padding-bottom: 30px;
-	background-color: #f4f4f7;
+	background-color: #181818;
 	&__wrapper {
 		.wrapper(1200px);
 		padding: 0 16px;
 	}
-	&__menu {
-		display: flex;
-		flex-wrap: wrap;
-		margin-bottom: 45px;
-		&-item {
-			width: 25%;
+/* 	&__menu {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 45px;
+	&-item {
+		width: 25%;
+		a {
+			color: @grey;
+			&:hover {
+				color: @blue;
+			}
+		}
+		&:nth-child(2),
+		&:nth-child(6),
+		&:nth-child(10) {
 			a {
-				color: @grey;
-				&:hover {
-					color: @blue;
-				}
+				padding-left: 6px;
 			}
-			&:nth-child(2),
-			&:nth-child(6),
-			&:nth-child(10) {
-				a {
-					padding-left: 6px;
-				}
+		}
+		&:nth-child(3),
+		&:nth-child(7),
+		&:nth-child(11) {
+			a {
+				padding-left: 9px;
 			}
-			&:nth-child(3),
-			&:nth-child(7),
-			&:nth-child(11) {
-				a {
-					padding-left: 9px;
-				}
-			}
-			&:nth-child(4),
-			&:nth-child(8),
-			&:nth-child(12) {
-				a {
-					padding-left: 15px;
-				}
+		}
+		&:nth-child(4),
+		&:nth-child(8),
+		&:nth-child(12) {
+			a {
+				padding-left: 15px;
 			}
 		}
 	}
+} */
 	&__navigation {
-		padding: 26px 121px;
-		border-top: 1px solid #e6e6e6;
-		border-bottom: 1px solid #e6e6e6;
+		padding: 28px 60px;
+		border-bottom: 1px solid #242424;
+		padding-bottom: 63px;
 		margin-bottom: 31px;
 		&-list {
 			display: flex;
@@ -55,6 +55,7 @@
 			font-size: 15px;
 			font-weight: 700;
 			a {
+				color: #fff;
 				&:hover {
 					color: #666;
 				}
@@ -141,5 +142,11 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+body.about {
+	.page-footer {
+		margin-top: 80px;
 	}
 }

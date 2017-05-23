@@ -1,0 +1,11 @@
+.number-confirm-pop-up(data-pop-up)
+	.number-confirm-pop-up__wrapper
+		.number-confirm-pop-up__form
+			.number-confirm-pop-up__form-close-btn(data-close-form)
+				+icon("close")
+			.number-confirm-pop-up__form-wrapper
+				form(action="#")
+					.number-confirm-pop-up__form-header
+						h3 Подтверждение телефона
+					input(type="text" placeholder="Введите код из SMS").number-confirm-pop-up__form-input#number-confirm-code
+					button.number-confirm-pop-up__form-send-btn Подтвердить

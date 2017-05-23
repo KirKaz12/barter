@@ -8,6 +8,102 @@
   </head>
     <body class="index">
       <div class="body-wrapper">
+        <div data-pop-up="data-pop-up" class="login-pop-up">
+          <div class="login-pop-up__wrapper">
+            <div class="login-pop-up__form">
+              <div data-close-form="data-close-form" class="login-pop-up__form-close-btn">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+              </div>
+              <div class="login-pop-up__form-wrapper">
+                <form action="#">
+                  <div class="login-pop-up__form-header">
+                    <h3>Вход</h3>
+                  </div>
+                  <input type="text" placeholder="E-mail" id="login-mail" class="login-pop-up__form-input"/>
+                  <input type="text" placeholder="Пароль" id="login-pass" class="login-pop-up__form-input"/>
+                  <div class="login-pop-up__form-options">
+                    <label for="remember-me" class="login-pop-up__form-label">
+                      <input id="remember-me" type="checkbox"/><span>Запомнить меня</span>
+                    </label><a href="#" class="login-pop-up__form-forget-pass">Забыли пароль?</a>
+                  </div>
+                  <button class="login-pop-up__form-login-btn">Войти</button><a href="#" class="login-pop-up__form-registration-btn">Регистрация</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-pop-up="data-pop-up" class="registration-pop-up">
+          <div class="registration-pop-up__wrapper">
+            <div class="registration-pop-up__form">
+              <div data-close-form="data-close-form" class="registration-pop-up__form-close-btn">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+              </div>
+              <div class="registration-pop-up__form-wrapper">
+                <form action="#">
+                  <div class="registration-pop-up__form-header">
+                    <h3>Регистрация</h3>
+                  </div>
+                  <input type="text" placeholder="Имя" id="registration-name" class="registration-pop-up__form-input"/>
+                  <input type="text" placeholder="Фамилия" id="registration-surname" class="registration-pop-up__form-input"/>
+                  <input type="text" placeholder="Телефон" id="registration-phone" class="registration-pop-up__form-input"/>
+                  <input type="text" placeholder="E-mail" id="registration-mail" class="registration-pop-up__form-input"/>
+                  <input type="text" placeholder="Пароль" id="registration-pass" class="registration-pop-up__form-input"/>
+                  <input type="text" placeholder="Повторите пароль" id="registration-pass-confirm" class="registration-pop-up__form-input"/>
+                  <div class="registration-pop-up__form-options">
+                    <label for="confirm-conditions" class="registration-pop-up__form-label">
+                      <input id="confirm-conditions" type="checkbox"/><span>Я согласен с условиями</span>
+                    </label><a href="#" class="registration-pop-up__form-agreement-link">Пользовательского соглашения и Оферты</a>
+                  </div>
+                  <button class="registration-pop-up__form-registration-btn">Зарегистрироваться</button><a href="#" class="registration-pop-up__form-login-btn">Вход</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-pop-up="data-pop-up" class="pass-recovery-pop-up">
+          <div class="pass-recovery-pop-up__wrapper">
+            <div class="pass-recovery-pop-up__form">
+              <div data-close-form="data-close-form" class="pass-recovery-pop-up__form-close-btn">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+              </div>
+              <div class="pass-recovery-pop-up__form-wrapper">
+                <form action="#">
+                  <div class="pass-recovery-pop-up__form-header">
+                    <h3>Восстановление пароля</h3>
+                  </div>
+                  <input type="text" placeholder="E-mail" id="pass-recovery-mail" class="pass-recovery-pop-up__form-input"/>
+                  <button class="pass-recovery-pop-up__form-send-btn">Выслать новый пароль</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-pop-up="data-pop-up" class="number-confirm-pop-up">
+          <div class="number-confirm-pop-up__wrapper">
+            <div class="number-confirm-pop-up__form">
+              <div data-close-form="data-close-form" class="number-confirm-pop-up__form-close-btn">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+              </div>
+              <div class="number-confirm-pop-up__form-wrapper">
+                <form action="#">
+                  <div class="number-confirm-pop-up__form-header">
+                    <h3>Подтверждение телефона</h3>
+                  </div>
+                  <input type="text" placeholder="Введите код из SMS" id="number-confirm-code" class="number-confirm-pop-up__form-input"/>
+                  <button class="number-confirm-pop-up__form-send-btn">Подтвердить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
         <header class="page-header">
           <nav class="page-header__navigation">
             <div class="page-header__navigation-wrapper">
@@ -30,12 +126,23 @@
                     <li class="page-header__user-menu-item"><a href="#">Сообщения</a></li>
                     <li class="page-header__user-menu-item"><a href="#">Редактировать профиль</a></li>
                     <li class="page-header__user-menu-item"><a href="#">Выход</a></li>
-                  </ul><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
-                        <svg class="icon icon-user ">
-                          <use xlink:href="#icon-user"></use>
-                        </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a>
+                  </ul>
+                  <div class="page-header__personal-menu_mob"><a href="#" class="page-header__personal-messages"><span class="page-header__personal-messages-icon">
+                          <svg class="icon icon-message ">
+                            <use xlink:href="#icon-message"></use>
+                          </svg></span><span class="page-header__personal-messages-count">1</span></a><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
+                          <svg class="icon icon-user ">
+                            <use xlink:href="#icon-user"></use>
+                          </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a></div>
                 </div>
               </div>
+              <div class="page-header__personal-menu"><a href="#" class="page-header__personal-messages"><span class="page-header__personal-messages-icon">
+                      <svg class="icon icon-message ">
+                        <use xlink:href="#icon-message"></use>
+                      </svg></span><span class="page-header__personal-messages-count">1</span></a><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
+                      <svg class="icon icon-user ">
+                        <use xlink:href="#icon-user"></use>
+                      </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a></div>
               <button type="button" class="page-header__request-btn"> 
                   <svg class="icon icon-plus ">
                     <use xlink:href="#icon-plus"></use>
@@ -186,20 +293,6 @@
         </main>
         <footer class="page-footer">
           <div class="page-footer__wrapper">
-            <ul class="page-footer__menu">
-              <li class="page-footer__menu-item"><a href="#">Недвижимость</a></li>
-              <li class="page-footer__menu-item"><a href="#"> Услуги и деятельность</a></li>
-              <li class="page-footer__menu-item"><a href="#"> Бытовая электроника	</a></li>
-              <li class="page-footer__menu-item"><a href="#">Хобби, отдых и спорт</a></li>
-              <li class="page-footer__menu-item"><a href="#">Транспорт </a></li>
-              <li class="page-footer__menu-item"><a href="#">Товары для детей</a></li>
-              <li class="page-footer__menu-item"><a href="#">Все для дома и сада</a></li>
-              <li class="page-footer__menu-item"><a href="#">Животные</a></li>
-              <li class="page-footer__menu-item"><a href="#">Бизнес</a></li>
-              <li class="page-footer__menu-item"><a href="#">Мода и стиль</a></li>
-              <li class="page-footer__menu-item"><a href="#"> Продукты питания</a></li>
-              <li class="page-footer__menu-item"><a href="#">Отдам даром</a></li>
-            </ul>
             <nav class="page-footer__navigation">
               <ul class="page-footer__navigation-list">
                 <li class="page-footer__navigation-item"><a href="#" class="page-footer__navigation-link">Подать объявление   </a></li>

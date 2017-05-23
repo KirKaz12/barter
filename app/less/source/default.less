@@ -3,12 +3,16 @@
 	transition: background-color .25s ease, color .10s ease;
 }
 body {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 24px;
+}
+.body-wrapper {
+	position: relative;
 }
 
 ul,
@@ -47,6 +51,73 @@ button {
 #icon-arrow-left {
 	.cls-1 {
 		fill: #fff;
+	}
+}
+#icon-close {
+	.cls-1 {
+		fill: #c1c1c1;
+	}
+}
+#icon-close.close_hover {
+	.cls-1 {
+		fill: #8e8e8e;
+	}
+}
+
+body .body-wrapper {
+	.cs-skin-border {
+		width: 180px;
+		height: 44px;
+		ul {
+			padding: 0 10px;
+			span {
+				padding: 0;
+				text-indent: 10px;
+				&:hover {
+					color: #fff;
+					background-color: @blue;
+				}
+			}
+		}
+		.cs-selected {
+			span:after {
+				display: none;
+			}
+		}
+		.cs-placeholder {
+			padding: 0;
+			border: 2px solid #e6e6e6;
+			padding: 7px 16px;
+			padding-bottom: 8px;
+			border-radius: 6px;
+			&:after {
+				content: "";
+				background-image: url(../img/svg/arrow-down.svg);
+				background-repeat: no-repeat;
+				display: block;
+				width: 10px;
+				height: 10px;
+				top: 56%;
+		    transform: translate(-5px,-50%);
+			}
+		}
+		.cs-options {
+			margin-top: 3px;
+			border: 2px solid #e6e6e6;
+			box-shadow: 0 0 30px #cdcdcd;
+			color: #000;
+			font-size: 13px;
+			line-height: 29px;
+		}
+		.cs-active  {
+			.cs-placeholder {
+				color: @blue !important;
+			}
+		}
+	}
+	div.cs-skin-border {
+		font-size: 13px;
+		font-weight: 400;
 	}
 }
 

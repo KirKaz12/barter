@@ -39,6 +39,6 @@ mixin poster(img,header,category,city,day,hours,mins,price,count)
 
 mixin services_item(text, number)
 	li.services__item
-		a.services__item-link #{text}
-		span.services__item-count #{number}
+		a.services__item-link(href="#") #{text}
+			span.services__item-count #{number}
 

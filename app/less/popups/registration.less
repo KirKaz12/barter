@@ -1,0 +1,54 @@
+.registration-pop-up {
+	.pop-up();
+	&__form {
+		.form(376px);
+		&-wrapper {
+			width: 81.4%;
+			margin: 0 auto;
+		}
+		&-header {
+			text-align: center;
+			font-size: 22px;
+			line-height: 24px;
+			margin-bottom: 21px;
+		}
+		&-input {
+			.input();
+		}
+		&-label {
+			.checkbox();
+		}
+		&-close-btn {
+			.close-btn();
+		}
+		&-options {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #e6e6e6;
+			margin-bottom: 15px;
+		}
+		&-forget-pass {
+			text-decoration: underline;
+			color: @red;
+			&:hover {
+				color: #3e3e3e;
+			}
+		}
+		&-registration-btn {
+			.blue-btn();
+		}
+		&-login-btn {
+			.grey-btn();
+			line-height: 44px;
+		}
+		&-agreement-link {
+			padding-left: 31px;
+			color: @blue;
+			text-decoration: underline;
+			width: 100%;
+			display: block;
+		}
+	}
+}

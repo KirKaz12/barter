@@ -25,10 +25,24 @@ header.page-header
 							a(href="#") Редактировать профиль
 						li.page-header__user-menu-item
 							a(href="#") Выход
-					a.page-header__login-link(href="#") 
-						span.page-header__login-link-icon
-							+icon("user")
-						span.page-header__login-link-text Личный кабинет
+					.page-header__personal-menu_mob
+						a.page-header__personal-messages(href="#")
+							span.page-header__personal-messages-icon
+								+icon("message")
+							span.page-header__personal-messages-count 1
+						a.page-header__login-link(href="#") 
+							span.page-header__login-link-icon
+								+icon("user")
+							span.page-header__login-link-text Личный кабинет
+			.page-header__personal-menu
+				a.page-header__personal-messages(href="#")
+					span.page-header__personal-messages-icon
+						+icon("message")
+					span.page-header__personal-messages-count 1
+				a.page-header__login-link(href="#") 
+					span.page-header__login-link-icon
+						+icon("user")
+					span.page-header__login-link-text Личный кабинет
 			button.page-header__request-btn(type="button") 
 				+icon("plus")
 				span Подать объявление 

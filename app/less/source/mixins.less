@@ -13,3 +13,129 @@
 	width: @width;
 	max-width: @max;
 }
+
+.clearfix() {
+	&::after {
+		clear: both;
+		display: table;
+		content: '';
+	}
+}
+/* ========  pop ups ========= */
+.blue-btn() {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+	font: inherit;
+	cursor: pointer;
+	display: block;
+	min-height: 44px;
+	background-color: @blue;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 14px;
+	&:hover {
+		background-color: @dark-blue;
+	}
+}
+
+.grey-btn() {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+	font: inherit;
+	cursor: pointer;
+	display: block;
+	min-height: 44px;
+	background-color: #c1c1c1;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 14px;
+	&:hover {
+		background-color: @red;
+	}
+}
+
+.pop-up() {
+	display: none;
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,5,11,.65);
+}
+
+.form(@width) {
+	padding-top: 50px;
+	padding-bottom: 15px;
+	position: absolute;
+	background-color: #fff;
+	width: @width;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+}
+
+.input() {
+	font: inherit;
+	color: @grey;
+	display: block;
+	margin-bottom: 20px;
+	min-height: 42px;
+	background-color: white;
+	border: 1px solid #e6e6e6;
+	border-radius: 6px;
+	padding-left: 15px;
+	width: 100%;
+	&::placeholder {
+		font: inherit;
+		color: @grey;
+	}
+}
+
+.close-btn() {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	cursor: pointer;
+	svg {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 13px;
+		height: 13px;
+	}
+}
+
+.checkbox() {
+	margin-right: 23px;
+	cursor: pointer;
+	input {
+		display: none;
+		&:checked + span:before {
+			background-color: @blue;
+			background-image: url(../img/svg/check_icon.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+	span {
+		padding-left: 31px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 18px;
+			height: 18px;
+			background-color: white;
+			border: 2px solid #e6e6e6;
+			border-radius: 6px;
+		}
+	}
+}

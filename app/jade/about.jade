@@ -1,0 +1,19 @@
+extends source/page-template
+
+block styles
+	+link("css/magnific-popup")
+	+link("css/style")
+block title
+	title О проекте
+block body
+	+body("about")
+block content
+	include about/page-header
+	main(class="about-main")
+		include about/about_content
+	include about/page-footer
+block scripts
+	+script("libs/jquery.min.js")
+	+script("libs/component.selectfx.js")
+	+script("libs/jquery.magnific-popup.min.js")
+	+script("js/common.js")

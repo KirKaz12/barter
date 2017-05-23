@@ -1,0 +1,11 @@
+.pass-recovery-pop-up(data-pop-up)
+	.pass-recovery-pop-up__wrapper
+		.pass-recovery-pop-up__form
+			.pass-recovery-pop-up__form-close-btn(data-close-form)
+				+icon("close")
+			.pass-recovery-pop-up__form-wrapper
+				form(action="#")
+					.pass-recovery-pop-up__form-header
+						h3 Восстановление пароля
+					input(type="text" placeholder="E-mail").pass-recovery-pop-up__form-input#pass-recovery-mail
+					button.pass-recovery-pop-up__form-send-btn Выслать новый пароль

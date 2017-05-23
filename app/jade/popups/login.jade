@@ -1,0 +1,18 @@
+.login-pop-up(data-pop-up)
+	.login-pop-up__wrapper
+		.login-pop-up__form
+			.login-pop-up__form-close-btn(data-close-form)
+				+icon("close")
+			.login-pop-up__form-wrapper
+				form(action="#")
+					.login-pop-up__form-header
+						h3 Вход
+					input(type="text" placeholder="E-mail").login-pop-up__form-input#login-mail
+					input(type="text" placeholder="Пароль").login-pop-up__form-input#login-pass
+					.login-pop-up__form-options
+						label(for="remember-me").login-pop-up__form-label
+							input#remember-me(type="checkbox")
+							span Запомнить меня
+						a(href="#").login-pop-up__form-forget-pass Забыли пароль?
+					button.login-pop-up__form-login-btn Войти
+					a.login-pop-up__form-registration-btn(href="#") Регистрация

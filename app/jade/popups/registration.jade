@@ -1,0 +1,22 @@
+.registration-pop-up(data-pop-up)
+	.registration-pop-up__wrapper
+		.registration-pop-up__form
+			.registration-pop-up__form-close-btn(data-close-form)
+				+icon("close")
+			.registration-pop-up__form-wrapper
+				form(action="#")
+					.registration-pop-up__form-header
+						h3 Регистрация
+					input(type="text" placeholder="Имя").registration-pop-up__form-input#registration-name
+					input(type="text" placeholder="Фамилия").registration-pop-up__form-input#registration-surname
+					input(type="text" placeholder="Телефон").registration-pop-up__form-input#registration-phone
+					input(type="text" placeholder="E-mail").registration-pop-up__form-input#registration-mail
+					input(type="text" placeholder="Пароль").registration-pop-up__form-input#registration-pass
+					input(type="text" placeholder="Повторите пароль").registration-pop-up__form-input#registration-pass-confirm
+					.registration-pop-up__form-options
+						label(for="confirm-conditions").registration-pop-up__form-label
+							input#confirm-conditions(type="checkbox")
+							span Я согласен с условиями
+						a(href="#").registration-pop-up__form-agreement-link Пользовательского соглашения и Оферты
+					button.registration-pop-up__form-registration-btn Зарегистрироваться
+					a.registration-pop-up__form-login-btn(href="#") Вход

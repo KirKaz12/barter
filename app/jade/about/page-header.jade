@@ -46,36 +46,8 @@ header.page-header
 			button.page-header__request-btn(type="button") 
 				+icon("plus")
 				span Подать объявление 
-	section.page-header__search
-		.page-header__search-wrapper
-			form.page-header__search-form
-				.page-header__search-controls-wrapper
-					select#category.cs-select.cs-skin-border(name="category-search")
-						option(value="" disabled selected) Категория
-						option(value="") Услуги и деятельность
-						option(value="") Товары для детей
-						option(value="") Мода и стиль
-						option(value="") Бытовая электроника
-						option(value="") Всё для дома и сада
-						option(value="") Продукты питания
-						option(value="") Транспорт
-						option(value="") Хобби, отдых и спорт
-					select#poster.cs-select.cs-skin-border(name="poster-search")
-						option(value="" disabled selected) Поиск по объявлениям
-						option(value="") Услуги и деятельность
-						option(value="") Товары для детей
-					select#location.cs-select.cs-skin-border(name="location-search")
-						option(value="" disabled selected) Вся Россия
-						option(value="") Москва
-						option(value="") Санкт-Петербург
-						option(value="") Казань
-					button.page-header__search-form-btn Найти
-				.page-header__options-wrapper
-					label(for="headers")
-						input#headers(type="checkbox")
-						span Искать по заголовкам
-					label(for="photo")
-						input#photo(type="checkbox")
-						span Только с фото
+	section.page-header__about
+		.page-header__about-wrapper
+			h2 О проекте
 
 

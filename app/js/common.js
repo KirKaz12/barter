@@ -93,6 +93,7 @@ $(document).ready(function () {
 				type: 'image' });
 		}
 	};
+	callPopUp();
 
 	var Gallery = function Gallery(mainItem, galleryList, galleryImages) {
 		this._mainItem = $("." + mainItem);
@@ -115,6 +116,7 @@ $(document).ready(function () {
 				var source = $(e.target).attr("src");
 				that._mainItem.css("opacity", 0);
 				that._mainItem.attr("src", source);
+				that._mainSource = that._mainItem.attr("src");
 				$(e.target).addClass("item-card__good-small-photos_active");
 				$(e.target).siblings("img").each(function (index, elem) {
 					$(elem).removeClass("item-card__good-small-photos_active");
@@ -125,11 +127,22 @@ $(document).ready(function () {
        },
        type: 'image' // this is default type
     });*/
-				callPopUp();
+				that._popUp(that._mainSource);
 				that._mainItem.animate({ "opacity": "1" }, 500);
 			}
 		});
 	};
+
+	Gallery.prototype._popUp = function (source) {
+		if ($.magnificPopup) {
+			$('.expand-btn').magnificPopup({
+				items: {
+					src: source
+				},
+				type: 'image' });
+		}
+	};
+
 	/*	Gallery.prototype._toggleMainImage = function() {
  		var that = this;
  		this._mainItem.on("click", function(e){
@@ -171,4 +184,22 @@ $(document).ready(function () {
 		this._offEventsOnMobiles();
 	};
 	new Gallery("item-card__good-main-photo img", "item-card__good-small-photos", "item-card__good-small-photos img").init();
+
+	var hoverEvent = function hoverEvent(selector, className, element) {
+		$(selector).on("mouseenter", function () {
+			$(element).addClass(className);
+		});
+		$(selector).on("mouseleave", function () {
+			$(element).removeClass(className);
+		});
+	};
+	hoverEvent("[data-close-form]", "close_hover", "#icon-close");
+	var closePopUp = function closePopUp(closeBtn) {
+		$(closeBtn).on("click", function () {
+			$(this).parents("[data-pop-up]").each(function (index, elem) {
+				$(elem).hide("slow");
+			});
+		});
+	};
+	closePopUp("[data-close-form]");
 });

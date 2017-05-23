@@ -121,7 +121,7 @@ gulp.task('browser-sync', function() {
 });
 
 //Строим html с тегами symbol
-gulp.task('svgSpriteBuild', function () {
+gulp.task('svgsprite', function () {
   return gulp.src('app/img/svg/*.svg')
       // minify svg
       .pipe(svgmin({
