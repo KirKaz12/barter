@@ -449,10 +449,10 @@
 			z-index: 1000;
 			will-change: transform;
 			transform: translateX(-100%);
-			transition: transform .5s cubic-bezier(0,.89,0,1.01);
+			transition: transform .45s ease;
 			&_visible {
 				transform: translateX(0);
-				transition: transform .5s cubic-bezier(0,.89,0,1.01);
+				transition: transform .45s ease;
 			}
 		}
 		&__menu {
@@ -655,7 +655,8 @@
 	}
 }
 
-body.about {
+body.about,
+body.post {
 	.page-header__personal-messages {
 		display: inline-block;
 	}

@@ -1,0 +1,249 @@
+.post-content {
+	&__wrapper {
+		.wrapper(1200px);
+		padding: 0 16px;
+	}
+	&__header {
+		h2 {
+			padding-top: 80px;
+			padding-bottom: 40px;
+			text-align: center;
+			font-size: 22px;
+			font-weight: 700;
+		}
+	}
+	&__block {
+		.cs-skin-border {
+			width: 100% !important;
+		}
+		background-color: #f4f4f7;
+		border: 1px solid #e6e6e6;
+		width: 64.4%;
+		margin: 0 auto;
+	}
+	&__form-wrapper {
+		width: 79.5%;
+		margin: 0 auto;
+		padding: 35px 20px;
+	}
+	&__form-btn {
+		.blue-btn();
+		width: 225px;
+		height: 44px;
+	}
+	&__post {
+		&-input {
+			.post-input();
+		}
+		&-category {
+		}
+		&-item-price {
+			display: inline-block;
+			width: 180px;
+		}
+		&-item-count {
+			display: inline-block;
+			width: 180px;
+		}
+		&-photos {
+			padding-bottom: 30px;
+			border-bottom: 1px solid #e6e6e6;
+			margin-bottom: 30px;
+		}
+		&-photos-content {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&-photos-icon {
+			width: 79px;
+			height: 79px;
+			line-height: 79px;
+			background-color: #e6e6e6;
+			border-radius: 6px;
+			margin-right: 20px;
+			text-align: center;
+			svg {
+				width: 45px;
+				height: 38px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+			&-photos-description {
+				display: flex;
+				flex-direction: column;
+				width: 200px;
+				p.label {
+					margin-bottom: 10px;
+				}
+			}
+			&-photos-label {
+				cursor: pointer;
+				span {
+					font-size: 15px;
+					font-weight: 700;
+					padding-left: 30px;
+					position: relative;
+					&::before {
+						top: 0;
+						left: 0;
+						content: '';
+						position: absolute;
+						display: block;
+						width: 21px;
+						height: 21px;
+						background-image: url(../img/svg/download.svg);
+					}
+				}
+			}
+			
+		
+		&-user {
+			&-btn-group {
+				font-size: 0;
+			}
+			&-btn {
+				.grey-btn();
+				display: inline-block;
+				vertical-align: top;
+				width: 178px;
+				min-height: 42px;
+				&_active {
+					background-color: @red;
+				}
+			}
+			&-tab-info {
+				position: relative;
+				min-height: 530px;
+			}
+			&-data {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				&[data-user-type="registered"] {
+					display: none;
+				}
+				&-wrapper {
+					padding-bottom: 30px;
+					border-bottom: 1px solid #e6e6e6;
+				}
+			}
+			&-name-info {
+				font-size: 0;
+			}
+			&-name {
+				font-size: 13px;
+				display: inline-block;
+				vertical-align: top;
+				width: 277px;
+			}
+			&-surname {
+				font-size: 13px;
+				display: inline-block;
+				vertical-align: top;
+				width: 277px;
+			}
+			&-location {
+				&-info {
+					font-size: 0;
+				}
+				&-city {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+				}
+				&-district {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+				}
+			}
+			&-login {
+				&-info {
+					font-size: 0;
+				}
+				&-mail {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+				}
+				&-pass {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+				}
+			}
+			&-number {
+				font-size: 0;
+				p.label {
+					font-size: 13px;
+				}
+				
+			}
+			&-code {
+				font-size: 0;
+				p.label {
+					font-size: 13px;
+				}
+			}
+			&-agreement {
+				margin-bottom: 35px;
+			}
+			&-agreement-label {
+				.checkbox();
+			}
+			&-agreement-link {
+				color: @blue;
+				text-decoration: underline;
+			}
+		}
+		&-number-send-btn {
+			font: inherit;
+			cursor: pointer;
+			font-size: 13px;
+			display: inline-block;
+			min-height: 42px;
+			width: 178px;
+			color: #fff;
+		}
+		&-confirm-code-btn {
+			font: inherit;
+			cursor: pointer;
+			font-size: 13px;
+			color: #fff;
+			display: inline-block;
+			min-height: 42px;
+			width: 178px;
+		}
+	}
+/* 	#post-category {
+	display: block;
+	width: 100%;
+	min-height: 42px;
+} */
+	#post-description {
+		min-height: 146px;
+	}
+	#post-user-number {
+		display: inline-block;
+		font-size: 13px;
+		width: 277px;
+	}
+	#post-user-code {
+		display: inline-block;
+		font-size: 13px;
+		width: 277px;
+	}
+	#post-photos-upload {
+		display: none;
+	}
+	p.label {
+		color: @grey;
+	}
+}

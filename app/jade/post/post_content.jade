@@ -1,0 +1,95 @@
+section.post-content
+	.post-content__wrapper
+		.post-content__header
+			h2 Подать объявление
+		.post-content__block
+			.post-content__form-wrapper
+				form(action="#")
+					.post-content__post-category
+						p.label Категория:
+						select#post-category.cs-select.cs-skin-border(name="post-category")
+							option(value="" disabled selected) - Не выбрано - 
+							option(value="") Услуги и деятельность
+							option(value="") Товары для детей
+							option(value="") Мода и стиль
+							option(value="") Бытовая электроника
+							option(value="") Всё для дома и сада
+							option(value="") Продукты питания
+							option(value="") Транспорт
+							option(value="") Хобби, отдых и спорт
+					.post-content__post-header
+						p.label Заголовок:
+						input(type="text")#post-header.post-content__post-input
+					.post-content__post-description
+						p.label Описание объявления:
+						textarea#post-description.post-content__post-input
+					.post-content__post-item-info
+						.post-content__post-item-price
+							p.label Цена за ед.:
+							input(type="text")#post-item-price.post-content__post-input
+						.post-content__post-item-count
+							p.label Количество:
+							input(type="text")#post-item-count.post-content__post-input
+					.post-content__post-photos
+						p.label Фотографии:
+						.post-content__post-photos-content
+							.post-content__post-photos-icon
+								+icon("photo")
+							.post-content__post-photos-description
+								p.label Вы можете прикрепить не более 4 фотографий
+								label.post-content__post-photos-label
+									input(type="file")#post-photos-upload.post-content__post-input
+									span Загрузить фото
+					.post-content__post-user-tab
+						.post-content__post-user-btn-group
+							button(type="button" data-user-btn="new").post-content__post-user-btn.post-content__post-user-btn_active Новый пользователь
+							button(type="button" data-user-btn="registered").post-content__post-user-btn Уже зарегистрирорван
+						.post-content__post-user-tab-info
+							.post-content__post-user-data(data-user-type="new")
+								.post-content__post-user-data-wrapper
+									.post-content__post-user-name-info
+										.post-content__post-user-name
+											p.label Имя:
+											input(type="text")#post-user-name.post-content__post-input
+										.post-content__post-user-surname
+											p.label Фамилия:
+											input(type="text")#post-user-surname.post-content__post-input
+									.post-content__post-user-location-info
+										.post-content__post-user-location-city
+											p.label Город:
+											select#post-user-city.cs-select.cs-skin-border(name="user-city")
+												option(value="" disabled selected) - Не выбрано - 
+												option(value="") Москва
+												option(value="") Санкт-Петербург
+												option(value="") Казань
+												option(value="") Новосибирск
+										.post-content__post-user-location-district
+											p.label Район:
+											select#post-user-district.cs-select.cs-skin-border(name="user-district")
+												option(value="" disabled selected) - Не выбрано - 
+												option(value="") Кировский
+												option(value="") Московский
+												option(value="") Вахитовский
+												option(value="") Приволжский
+									.post-content__post-user-login-info
+										.post-content__post-user-login-mail
+											p.label E-mail:
+											input(type="text")#post-user-mail.post-content__post-input
+										.post-content__post-user-login-pass
+											p.label Пароль
+											input(type="text")#post-user-pass.post-content__post-input
+									.post-content__post-user-number
+											p.label Телефон:
+											input(type="text")#post-user-number.post-content__post-input
+											button(type="button").post-content__post-number-send-btn Получить код
+									.post-content__post-user-code
+											p.label Код из SMS:
+											input(type="text")#post-user-code.post-content__post-input
+											button(type="button").post-content__post-confirm-code-btn Подтвердить
+								.post-content__post-user-agreement
+									label(for="confirm-conditions").post-content__post-user-agreement-label
+										input#confirm-conditions(type="checkbox")
+										span Я согласен с условиями
+									a(href="#").post-content__post-user-agreement-link Пользовательского соглашения и Оферты
+							.post-content__post-user-data(data-user-type="registered")
+					button(type="submit").post-content__form-btn Подать объявление
