@@ -1,0 +1,19 @@
+extends source/page-template
+
+block styles
+	+link("css/magnific-popup")
+	+link("css/style")
+block title
+	title Помощь
+block body
+	+body("help")
+block content
+	include help/page-header
+	main(class="help-main")
+		include help/help_content
+	include help/page-footer
+block scripts
+	+script("libs/jquery.min.js")
+	+script("libs/component.selectfx.js")
+	+script("libs/jquery.magnific-popup.min.js")
+	+script("js/common.js")

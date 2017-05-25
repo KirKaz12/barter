@@ -47,7 +47,7 @@
                       </svg></span><span class="page-header__personal-messages-count">1</span></a><a href="#" class="page-header__login-link"> <span class="page-header__login-link-icon">
                       <svg class="icon icon-user ">
                         <use xlink:href="#icon-user"></use>
-                      </svg></span><span class="page-header__login-link-text">Личный кабинет</span></a></div>
+                      </svg></span><span class="page-header__login-link-text">deadpool@gmail.com</span></a></div>
               <button type="button" class="page-header__request-btn"> 
                   <svg class="icon icon-plus ">
                     <use xlink:href="#icon-plus"></use>
@@ -204,13 +204,13 @@
                             </div>
                             <div class="post-content__post-user-number">
                               <p class="label">Телефон:</p>
-                              <input type="text" id="post-user-number" class="post-content__post-input"/>
-                              <button type="button" class="post-content__post-number-send-btn">Получить код</button>
+                              <input type="text" data-confirm-input="phone" id="post-user-number" class="post-content__post-input"/>
+                              <button type="button" data-confirm-btn="phone" class="post-content__post-number-send-btn post-content__post-user-confirm-btn">Получить код</button>
                             </div>
                             <div class="post-content__post-user-code">
                               <p class="label">Код из SMS:</p>
-                              <input type="text" id="post-user-code" class="post-content__post-input"/>
-                              <button type="button" class="post-content__post-confirm-code-btn">Подтвердить</button>
+                              <input type="text" data-confirm-input="code" id="post-user-code" class="post-content__post-input"/>
+                              <button type="button" data-confirm-btn="code" class="post-content__post-confirm-code-btn post-content__post-user-confirm-btn">Подтвердить</button>
                             </div>
                           </div>
                           <div class="post-content__post-user-agreement">

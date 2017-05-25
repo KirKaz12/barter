@@ -10,6 +10,7 @@ body {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 24px;
+	overflow-x: hidden;
 }
 .body-wrapper {
 	position: relative;
@@ -121,16 +122,123 @@ body .body-wrapper {
 	}
 }
 
-@media screen and (max-width: 1279px) {
-#icon-plus {
-	.cls-1 {
-		fill: @blue;
+.breadcrumbs {
+		font-size: 12px;
+		color: @grey;
+		margin-bottom: 23px;
+		&__link {
+			position: relative;
+			padding-right: 20px;
+			&:not(:last-child){
+				&::after {
+					position: absolute;
+					content: "/";
+					display: inline-block;
+					right: 10px;
+					vertical-align: middle;
+					top: 0;
+			    line-height: 17px;
+				}
+			}
+		}
+		&__mobile {
+			display: none;
+			.breadcrumbs__link {
+				position: relative;
+				line-height: 16px;
+				padding-left: 31px;
+				&::before {
+					transform: rotate(180deg);
+					width: 20px;
+					height: 14px;
+					left: 0;
+					top: 3px;
+					position: absolute;
+					content: '';
+					display: inline-block;
+					background-image: url(../img/svg/arrow-right.svg);
+				}
+			}
+		}
+	}
+.pagination {
+	font-size: 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	&-link {
+		display: inline-block;
+		font-size: 13px;
+		width: 22px;
+		height: 22px;
+		background-color: transparent;
+		border-radius: 6px;
+		text-align: center;
+		margin-right: 11px;
+		line-height: 22px;
+		font-size: 14px;
+		&_active {
+			background-color: @blue;
+			color: #fff;
+		}
 	}
 }
+
+.pagination-next {
+	margin-left: auto;
+	a {
+		color: @grey;
+		padding-right: 35px;
+		position: relative;
+	}
+	svg {
+		width: 20px;
+		height: 14px;
+		position: absolute;
+		right: -35px;
+		top: 2.5px;
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	#icon-plus {
+		.cls-1 {
+			fill: @blue;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
-body {
-	overflow-x: hidden;
-}
+	body {
+		overflow-x: hidden;
+	}
+	.breadcrumbs {
+		&__desktop {
+			display: none;
+		}
+		&__mobile {
+			display: block;
+		}
+	}
+	.pagination {
+			 position: relative;
+			//transform: translateX(0);
+			//left: 0; 
+			.pagination-link {
+				&:nth-child(4),
+				&:nth-child(5) {
+					display: none;
+				}
+			}
+		}
+		.pagination-next {
+			margin-left: 0;
+			a {
+				font-size: 0;
+			}
+			svg {
+				right: 0;
+				top: -11px;
+			}
+		}
 }

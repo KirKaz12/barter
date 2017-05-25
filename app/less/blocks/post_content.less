@@ -5,7 +5,7 @@
 	}
 	&__header {
 		h2 {
-			padding-top: 80px;
+			padding-top: 57px;
 			padding-bottom: 40px;
 			text-align: center;
 			font-size: 22px;
@@ -18,13 +18,15 @@
 		}
 		background-color: #f4f4f7;
 		border: 1px solid #e6e6e6;
-		width: 64.4%;
+		width: 66.2%;
 		margin: 0 auto;
+		margin-bottom: 80px;
 	}
 	&__form-wrapper {
-		width: 79.5%;
+		width: 79.75%;
 		margin: 0 auto;
 		padding: 35px 20px;
+		padding-bottom: 17px;
 	}
 	&__form-btn {
 		.blue-btn();
@@ -36,12 +38,28 @@
 			.post-input();
 		}
 		&-category {
+			margin-bottom: 15px;
+		}
+		&-header {
+			margin-bottom: 15px;
+		}
+		&-description {
+			margin-bottom: 15px;
+		}
+		&-item-info {
+			font-size: 0;
+			margin-bottom: 15px;
 		}
 		&-item-price {
+			font-size: 13px;
+			vertical-align: top;
 			display: inline-block;
 			width: 180px;
+			margin-right: 20px;
 		}
 		&-item-count {
+			font-size: 13px;
+			vertical-align: top;
 			display: inline-block;
 			width: 180px;
 		}
@@ -69,52 +87,55 @@
 				vertical-align: middle;
 			}
 		}
-			&-photos-description {
-				display: flex;
-				flex-direction: column;
-				width: 200px;
-				p.label {
-					margin-bottom: 10px;
+		&-photos-description {
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			p.label {
+				margin-bottom: 10px;
+				line-height: 18px;
+				font-size: 12px;
+			}
+		}
+		&-photos-label {
+			cursor: pointer;
+			span {
+				font-size: 15px;
+				font-weight: 700;
+				padding-left: 30px;
+				position: relative;
+				&::before {
+					top: 0;
+					left: 0;
+					content: '';
+					position: absolute;
+					display: block;
+					width: 21px;
+					height: 21px;
+					background-image: url(../img/svg/download.svg);
 				}
 			}
-			&-photos-label {
-				cursor: pointer;
-				span {
-					font-size: 15px;
-					font-weight: 700;
-					padding-left: 30px;
-					position: relative;
-					&::before {
-						top: 0;
-						left: 0;
-						content: '';
-						position: absolute;
-						display: block;
-						width: 21px;
-						height: 21px;
-						background-image: url(../img/svg/download.svg);
-					}
-				}
-			}
-			
-		
+		}
 		&-user {
 			&-btn-group {
 				font-size: 0;
+				margin-bottom: 12px;
 			}
 			&-btn {
 				.grey-btn();
+				margin-bottom: 0;
 				display: inline-block;
 				vertical-align: top;
 				width: 178px;
 				min-height: 42px;
+				margin-right: 20px;
 				&_active {
 					background-color: @red;
 				}
 			}
 			&-tab-info {
 				position: relative;
-				min-height: 530px;
+				min-height: 510px;
 			}
 			&-data {
 				position: absolute;
@@ -128,16 +149,19 @@
 				&-wrapper {
 					padding-bottom: 30px;
 					border-bottom: 1px solid #e6e6e6;
+					margin-bottom: 30px;
 				}
 			}
 			&-name-info {
 				font-size: 0;
+				margin-bottom: 15px;
 			}
 			&-name {
 				font-size: 13px;
 				display: inline-block;
 				vertical-align: top;
 				width: 277px;
+				margin-right: 20px;
 			}
 			&-surname {
 				font-size: 13px;
@@ -148,12 +172,14 @@
 			&-location {
 				&-info {
 					font-size: 0;
+					margin-bottom: 15px;
 				}
 				&-city {
 					font-size: 13px;
 					display: inline-block;
 					vertical-align: top;
 					width: 277px;
+					margin-right: 20px;
 				}
 				&-district {
 					font-size: 13px;
@@ -165,12 +191,14 @@
 			&-login {
 				&-info {
 					font-size: 0;
+					margin-bottom: 15px;
 				}
 				&-mail {
 					font-size: 13px;
 					display: inline-block;
 					vertical-align: top;
 					width: 277px;
+					margin-right: 20px;
 				}
 				&-pass {
 					font-size: 13px;
@@ -181,10 +209,10 @@
 			}
 			&-number {
 				font-size: 0;
+				margin-bottom: 15px;
 				p.label {
 					font-size: 13px;
 				}
-				
 			}
 			&-code {
 				font-size: 0;
@@ -197,38 +225,39 @@
 			}
 			&-agreement-label {
 				.checkbox();
+				margin-right: 0;
 			}
 			&-agreement-link {
 				color: @blue;
 				text-decoration: underline;
 			}
-		}
-		&-number-send-btn {
-			font: inherit;
-			cursor: pointer;
-			font-size: 13px;
-			display: inline-block;
-			min-height: 42px;
-			width: 178px;
-			color: #fff;
-		}
-		&-confirm-code-btn {
-			font: inherit;
-			cursor: pointer;
-			font-size: 13px;
-			color: #fff;
-			display: inline-block;
-			min-height: 42px;
-			width: 178px;
+			&-confirm-btn {
+				.grey-btn();
+				margin-bottom: 0;
+				margin-left: 20px;
+				font: inherit;
+				cursor: pointer;
+				font-size: 13px;
+				color: #fff;
+				display: inline-block;
+				min-height: 42px;
+				width: 178px;
+				&:hover {
+					background-color: #9a9a9a;
+				}
+				&_active {
+					background-color: @blue;
+					&:hover {
+						background-color: @dark-blue;
+					}
+				}
+			}
 		}
 	}
-/* 	#post-category {
-	display: block;
-	width: 100%;
-	min-height: 42px;
-} */
 	#post-description {
 		min-height: 146px;
+		max-height: 400px;
+		resize: vertical;
 	}
 	#post-user-number {
 		display: inline-block;
@@ -245,5 +274,127 @@
 	}
 	p.label {
 		color: @grey;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.post-content {
+		&__wrapper {
+			width: 92.5%;
+			max-width: 900px;
+		}
+		&__block {
+			width: 100%;
+		}
+		&__form {
+			&-wrapper {
+				width: 90%;
+			}
+		}
+		&__post {
+			&-user {
+				&-name,
+				&-surname {
+					width: 100%;
+					margin-right: 0;
+				}
+				&-name {
+					margin-bottom: 15px;
+				}
+				&-location {
+					&-city,
+					&-district {
+						width: 100%;
+						margin-right: 0;
+					}
+					&-city {
+						margin-bottom: 15px;
+						.cs-skin-border {
+							z-index: 101;
+						}
+					}
+				}
+				&-login {
+					&-mail {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+					&-pass {
+						width: 100%;
+						margin-right: 0;
+					}
+				}
+				&-tab-info {
+					position: relative;
+					min-height: 750px;
+				}
+			}
+		}
+		.cs-skin-border {
+			max-width: none !important;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.post-content {
+		&__wrapper {
+	    max-width: 500px;
+	    padding: 0;
+		}
+		&__form {
+			&-wrapper {
+				width: 100%;
+				padding-top: 30px;
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+		}
+		&__post {
+			&-item {
+				&-price,
+				&-count {
+					width: calc((100%-20px)/2);
+				}
+			}
+			&-photos {
+				&-description {
+					width: 100%;
+					p {
+						padding-top: 20px;
+						max-width: 200px;
+					}
+				}
+			}
+			&-user {
+				&-btn {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+				&-number {
+					text-align: right;
+				}
+				&-code {
+					text-align: right;
+				}
+				&-tab-info {
+					min-height: 950px;
+				}
+				&-agreement-link {
+					padding-left: 31px;
+					display: block;
+				}
+			}
+		}
+		#post-user-number {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		#post-user-code {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 }

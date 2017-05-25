@@ -347,28 +347,9 @@ body.item_card .page-footer {
 	opacity: .95;
 }
 
-	.breadcrumbs {
-		font-size: 12px;
-		color: @grey;
-		margin-bottom: 23px;
-		&__link {
-			position: relative;
-			padding-right: 20px;
-			&:not(:last-child){
-				&::after {
-					position: absolute;
-					content: "/";
-					display: inline-block;
-					right: 10px;
-					vertical-align: middle;
-					top: 0;
-			    line-height: 17px;
-				}
-			}
-		}
-	}
+	
 
-@media (max-width: 1279px) and (min-width: 768px) {
+@media screen and (max-width: 1279px) {
 	.item-card {
 		&__wrapper {
 			width: 92.5%;
@@ -379,9 +360,11 @@ body.item_card .page-footer {
 				padding-right: 10px;
 				padding-left: 10px;
 				&-photo {
+					order: 1;
 					float: none;
 					width: 100%;
 					height: 300px;
+					margin-bottom: 15px;
 					img {
 						display: block;
 						margin: 0 auto;
@@ -389,7 +372,13 @@ body.item_card .page-footer {
 					}
 				}
 			}
+			&-gallery {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+			}
 			&-small-photos {
+				order: 2;
 				float: none;
 				width: 100%;
 				display: flex;
@@ -443,6 +432,75 @@ body.item_card .page-footer {
 					font-size: 14px;
 					margin-bottom: 20px;
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.item-card {
+		&__wrapper {
+			width: 87.5%;
+			max-width: 500px;
+			padding: 0;
+		}
+		&__header {
+			width: 85.5%;
+			h2 {
+				font-size: 20px;
+			}
+		}
+		&__good {
+			margin-bottom: 30px;
+			&-main {
+				width: 100%;
+				float: none;
+				padding-right: 0;
+				padding-left: 0;
+				border-right: none;
+				border-left: none;
+				border-top: none;
+				&-photo {
+					min-height: 195px;
+					height: auto;
+					img {
+						height: auto;
+					}
+				}
+			}
+			&-details {
+				width: 100%;
+				float: none;
+				border-right: none;
+				border-left: none;
+				border-top: none;
+			}
+			&-small-photos {
+				img {
+					min-height: 62px;
+					height: auto;
+				}
+			}
+		}
+		&__info {
+			justify-content: space-between;
+			&-print {
+				display: none;
+			}
+			&-location,
+			&-date {
+				margin-right: 0;
+			}
+		}
+		&__share {
+			text-align: center;
+			p {
+				margin-bottom: 7px;
+				margin-right: 0;
+				display: block;
+			}
+			&-socials {
+				display: block;
 			}
 		}
 	}

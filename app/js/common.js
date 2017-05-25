@@ -181,7 +181,7 @@ $(document).ready(function () {
 		this._createSources();
 		this._toggleSmallImage();
 		//this._toggleMainImage();
-		this._offEventsOnMobiles();
+		//this._offEventsOnMobiles();
 	};
 	new Gallery("item-card__good-main-photo img", "item-card__good-small-photos", "item-card__good-small-photos img").init();
 
@@ -202,4 +202,18 @@ $(document).ready(function () {
 		});
 	};
 	closePopUp("[data-close-form]");
+	var confirmInput = $("[data-confirm-input]");
+	var changeButtonState = function changeButtonState(input) {
+		input.on("keyup", function () {
+			var attr = $(this).attr("data-confirm-input");
+			var btn = $(this).siblings("[data-confirm-btn]");
+			var value = this.value;
+			if (value.length > 0 && !isNaN(value)) {
+				btn.addClass("post-content__post-user-confirm-btn_active");
+			} else {
+				btn.removeClass("post-content__post-user-confirm-btn_active");
+			}
+		});
+	};
+	changeButtonState(confirmInput);
 });

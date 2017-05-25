@@ -80,12 +80,12 @@ section.post-content
 											input(type="text")#post-user-pass.post-content__post-input
 									.post-content__post-user-number
 											p.label Телефон:
-											input(type="text")#post-user-number.post-content__post-input
-											button(type="button").post-content__post-number-send-btn Получить код
+											input(type="text" data-confirm-input="phone")#post-user-number.post-content__post-input
+											button(type="button" data-confirm-btn="phone").post-content__post-number-send-btn.post-content__post-user-confirm-btn Получить код
 									.post-content__post-user-code
 											p.label Код из SMS:
-											input(type="text")#post-user-code.post-content__post-input
-											button(type="button").post-content__post-confirm-code-btn Подтвердить
+											input(type="text" data-confirm-input="code")#post-user-code.post-content__post-input
+											button(type="button" data-confirm-btn="code").post-content__post-confirm-code-btn.post-content__post-user-confirm-btn Подтвердить
 								.post-content__post-user-agreement
 									label(for="confirm-conditions").post-content__post-user-agreement-label
 										input#confirm-conditions(type="checkbox")

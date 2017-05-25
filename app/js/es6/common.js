@@ -200,7 +200,7 @@ $(document).ready(function() {
 		this._createSources();
 		this._toggleSmallImage();
 		//this._toggleMainImage();
-		this._offEventsOnMobiles();
+		//this._offEventsOnMobiles();
 	};
 	new Gallery(
 		"item-card__good-main-photo img",
@@ -225,7 +225,20 @@ $(document).ready(function() {
 		});
 	};
 	closePopUp("[data-close-form]");
-
+	const confirmInput = $("[data-confirm-input]");
+	const changeButtonState = (input) => {
+		input.on("keyup", function(){
+			let attr = $(this).attr("data-confirm-input");
+			let btn = $(this).siblings("[data-confirm-btn]");
+			let value = this.value;
+			if( value.length > 0 && !isNaN(value)) {
+				btn.addClass("post-content__post-user-confirm-btn_active");
+			} else {
+				btn.removeClass("post-content__post-user-confirm-btn_active");
+			}
+		});
+	};
+	changeButtonState(confirmInput);
 });
 
 

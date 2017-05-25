@@ -1,0 +1,48 @@
+.help-content {
+	&__wrapper {
+		.wrapper(1200px);
+		padding: 0 16px;
+	}
+	&__text {
+		width: 86.56%;
+		margin: 0 auto;
+		padding: 0 20px;
+		padding-top: 54px;
+	}
+	.page-header__about {
+		margin-bottom: 80px;
+	}
+	h3 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	p {
+		padding-top: 18px;
+		font-size: 14px;
+		color: #3d3d3d;
+		padding-bottom: 8px;
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.help-content {
+		&__wrapper {
+			width: 92.5%;
+			max-width: 900px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.help-content {
+		&__wrapper {
+			max-width: 900px;
+			padding: 0;
+		}
+		&__text {
+			width: 100%;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
