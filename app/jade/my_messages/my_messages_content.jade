@@ -2,10 +2,14 @@ section.my-messages
 	.my-messages__wrapper
 		.my-messages__tab-panel
 			.my-messages__tab-btn-group
-				button(type="button").my-messages__tab-btn.my-messages__tab-btn_active Все  
-				button(type="button").my-messages__tab-btn Новые
-				button(type="button").my-messages__tab-btn Полученные 
-				button(type="button").my-messages__tab-btn Отправленные
+				a(href="#").my-messages__tab-btn.my-messages__tab-btn_active Все  
+				a(href="#").my-messages__tab-btn Новые
+				a(href="#").my-messages__tab-btn Полученные 
+				a(href="#").my-messages__tab-btn Отправленные
 			a(href="#").my-messages__delete-btn #[+icon("trash")] #[+icon("trash_hover","hover")] Удалить
 		.my-messages__list
-			
+			+my_message("pushkin","Александр Пушкин","Новый бордовые кеды Vans Old School","Здравствуйте! Меня заинтересовало ваше объявление, хотелось уточнить детали", "27", "апреля", "11", "34")
+			+my_message("gogol","Николай Гоголь","Новое постельное белье","Привет! Договорились!", "14", "мая", "08", "51")
+			+my_message("chekhov","Антон Чехов","Чехол для iphone 6s","Здравствуйте! Не могли бы Вы отправить мне товар в другой город?", "1", "июня", "20", "22")
+			+my_message("lermontov","Михаил Лермонтов","Натяжные потолки от производителя","Хай! Продложение ещё актуально?", "7", "августа", "09", "39")
+

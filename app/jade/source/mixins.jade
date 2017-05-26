@@ -60,16 +60,16 @@ mixin my_poster(img,header,price,count)
 
 mixin my_message(img,name,title,msg,day,month,hour,min)
 	li.my-messages__item
-		.my-messages__item-check
+		a.my-messages__message-link(href="#")
+		.my-messages__item-check(data-check-message="")
+			label.my-messages__label
+				input(type="checkbox" data-message-input="").my-messages__input
+				span
 		.my-messages__item-logo
-			img(src="img/avatars/"+img+".jpg", alt="")
+			img(src="img/avatars/"+img+".png", alt="")
 		.my-messages__item-details
 			p.name #{name}
 			p.post-item #{title}
 			p.message-shortcut #{msg}
-		.my-messages__item-date
-			span.day #{day}
-			span.month #{month}
-			span.hours #{hour}
-			span.mins #{min}
+		.my-messages__item-date	#[span.day #{day}] #[span.month #{month} ] #[span.hours #{hour}:]#[span.mins #{min}]
 

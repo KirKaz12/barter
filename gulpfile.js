@@ -35,6 +35,7 @@ var gulp         = require('gulp'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
+    cssnano = require('gulp-cssnano'),
     flatten = require('gulp-flatten');
 
 //=========== Tasks
@@ -45,7 +46,7 @@ gulp.task('jade', function() {
                 gutil.log(error.message); //Продолжаем watch после ошибки
                 this.emit('end');
         }))
-        .pipe(jade({pretty: true})) 
+        .pipe(jade()) 
         .pipe(gulp.dest('app')) 
 });
 //Перезагрузка после изменения  .jade
@@ -62,7 +63,8 @@ gulp.task('less', function() {
         }))
 		.pipe(less())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) 
-		.pipe(gulp.dest('app/css/')) 
+		.pipe(cssnano())
+    .pipe(gulp.dest('app/css/')) 
 		.pipe(browserSync.reload({stream: true}))
 });
 
