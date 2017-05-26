@@ -41,6 +41,16 @@
 			line-height: 18px;
 		}
 	}
+	&__expand {
+		display: none;
+		text-align: center;
+		&-link {
+			display: block;
+			color: @blue;
+			text-decoration: underline;
+			font-size: 14px;
+		}
+	}
 	.posters__header-wrapper {
 		p {
 			font-size: 14px;
@@ -64,6 +74,48 @@
 			margin-right: 0;
 			&:nth-child(even) {
 				float: right;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.services {
+		&__wrapper {
+			max-width: 500px;
+			width: 87.5%;
+			padding: 0;
+		}
+		&__header {
+			h2 {
+				font-size: 20px;
+			}
+		}
+		&__container {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 25px;
+			&::after {
+				display: none;
+			}
+		}
+		&__list {
+			width: 100%;
+			float: none !important;
+			&:nth-of-type(n+2) {
+				display: none;
+			}
+			&_visible {
+				display: block !important;
+			}
+		}
+		&__expand {
+			display: block;
+		}
+		.posters__header-wrapper {
+			justify-content: flex-end;
+			p {
+				display: none;
 			}
 		}
 	}

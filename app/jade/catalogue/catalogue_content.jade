@@ -14,20 +14,22 @@ section.services
 				+services_item("Бухгалтерские услуги", "248")
 				+services_item("Дипломы и набор текста", "42")
 				+services_item("Другое", "6750")
-			ul.services__list
+			ul.services__list(data-expand-list="false")
 				+services_item("Музыка и развлечения", "436")
 				+services_item("Няни, сиделки", "108")
 				+services_item("Образование, курсы", "1478")
 				+services_item("Перевод", "60")
 				+services_item("Питание", "138")
 				+services_item("Ремонт техники", "1019")
-			ul.services__list
+			ul.services__list(data-expand-list="false")
 				+services_item("Сад", "122")
 				+services_item("Транспорт", "2676")
 				+services_item("Уборка", "508")
 				+services_item("Установка оборудования", "383")
 				+services_item("Уход за животными", "224")
 				+services_item("Юридические услуги", "1154")
+		.services__expand
+			a.services__expand-link(href="#", data-expand-link="") Показать все  
 		.posters__header-wrapper
 			p В разделе #[span 9 158 объявлений]
 			select#sort.cs-select.cs-skin-border(name="sorting")

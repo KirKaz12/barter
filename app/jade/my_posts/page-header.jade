@@ -1,0 +1,54 @@
+header.page-header
+	nav.page-header__navigation
+		.page-header__navigation-wrapper
+			button(type="button" data-burger-btn="").page-header__burger
+			a(href="#").page-header__logo-text BARTER
+			.page-header__menu-wrapper(data-burger-menu="")
+				.page-header__menu-controls-wrapper
+					button(type="button" data-close-btn="").page-header__close-btn
+						+icon("arrow-left")
+					ul.page-header__menu
+						li.page-header__menu-item
+							a(href="#") Объявления  
+						li.page-header__menu-item
+							a(href="#") О проекте   
+						li.page-header__menu-item
+							a(href="#") Помощь
+					ul.page-header__user-menu
+						li.page-header__user-menu-item
+							a(href="#") Я продаю  
+						li.page-header__user-menu-item
+							a(href="#") Хочу купить  
+						li.page-header__user-menu-item
+							a(href="#") Сообщения
+						li.page-header__user-menu-item
+							a(href="#") Редактировать профиль
+						li.page-header__user-menu-item
+							a(href="#") Выход
+					.page-header__personal-menu_mob
+						a.page-header__personal-messages(href="#")
+							span.page-header__personal-messages-icon
+								+icon("message")
+							span.page-header__personal-messages-count 1
+						a.page-header__login-link(href="#") 
+							span.page-header__login-link-icon
+								+icon("user")
+							span.page-header__login-link-text deadpool@gmail.com
+			.page-header__personal-menu
+				a.page-header__personal-messages(href="#")
+					span.page-header__personal-messages-icon
+						+icon("message")
+					span.page-header__personal-messages-count 1
+				a.page-header__login-link(href="#") 
+					span.page-header__login-link-icon
+						+icon("user")
+					span.page-header__login-link-text deadpool@gmail.com
+			button.page-header__request-btn(type="button") 
+				+icon("plus")
+				span Подать объявление 
+	section.page-header__about
+		.page-header__about-wrapper
+			h2 Личный кабинет
+			p.page-header__about-user-mail deadpool@gmail.com
+
+

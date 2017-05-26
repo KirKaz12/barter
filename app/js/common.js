@@ -216,4 +216,20 @@ $(document).ready(function () {
 		});
 	};
 	changeButtonState(confirmInput);
+	var showAllBtn = $("[data-expand-link]");
+	var listToExpand = $("[data-expand-list]");
+	showAllBtn.on("click", function (e) {
+		e.preventDefault();
+		listToExpand.each(function (index, elem) {
+			$(elem).toggleClass("services__list_visible");
+		});
+		var text = $(this).text();
+
+		if (text.indexOf("Показать все") !== -1) {
+			console.log(text);
+			$(this).text("Свернуть");
+		} else {
+			$(this).text("Показать все");
+		}
+	});
 });

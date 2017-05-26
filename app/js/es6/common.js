@@ -239,6 +239,23 @@ $(document).ready(function() {
 		});
 	};
 	changeButtonState(confirmInput);
+	const showAllBtn = $("[data-expand-link]");
+	const listToExpand = $("[data-expand-list]");
+	showAllBtn.on("click", function(e){
+		e.preventDefault();
+		listToExpand.each(function(index, elem){
+			$(elem).toggleClass("services__list_visible");
+		});
+		let text = $(this).text();
+
+		if(text.indexOf("Показать все") !== -1) {
+			console.log(text)
+			$(this).text("Свернуть")
+		}
+		else {
+			$(this).text("Показать все")
+		}	
+	});
 });
 
 
