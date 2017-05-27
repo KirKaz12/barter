@@ -91,7 +91,9 @@ gulp.task('jsminify', function() {
 
 //Сжатие библиотек
 gulp.task('libminify', function() {
-    return gulp.src('app/libs/*.js') 
+    return gulp.src(['app/libs/jquery.min.js',
+      'app/libs/jquery.magnific-popup.min.js',
+      'app/libs/component.selectfx.js']) 
         .pipe(concat('libs.min.js')) 
         .pipe(uglify()) 
         .pipe(gulp.dest('dist/js'));
