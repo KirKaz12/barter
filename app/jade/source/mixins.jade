@@ -63,7 +63,7 @@ mixin my_message(img,name,title,msg,day,month,hour,min)
 		a.my-messages__message-link(href="#")
 		.my-messages__item-check(data-check-message="")
 			label.my-messages__label
-				input(type="checkbox" data-message-input="").my-messages__input
+				input(type="checkbox", data-message-input="", name="message").my-messages__input
 				span
 		.my-messages__item-logo
 			img(src="img/avatars/"+img+".png", alt="")
@@ -71,5 +71,5 @@ mixin my_message(img,name,title,msg,day,month,hour,min)
 			p.name #{name}
 			p.post-item #{title}
 			p.message-shortcut #{msg}
-		.my-messages__item-date	#[span.day #{day}] #[span.month #{month} ] #[span.hours #{hour}:]#[span.mins #{min}]
+		.my-messages__item-date #[span.day #{day}] #[span.month #{month} ] #[span.hours #{hour}:]#[span.mins #{min}]
 

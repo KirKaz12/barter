@@ -232,20 +232,4 @@ $(document).ready(function () {
 			$(this).text("Показать все");
 		}
 	});
-	$("[data-check-message]").on("click", function () {
-		var input = void 0;
-		var that = this;
-		var children = this.childNodes;
-		console.log(children);
-		[].forEach.call(children, function (e) {
-			if (e === that.querySelector("input[data-message-input]")) input = e;
-		});
-		//children.forEach(); 
-		if (!$(input).prop("checked")) {
-			console.log(input);
-			$(input).prop("checked", true);
-		} else {
-			$(input).prop("checked", false);
-		}
-	});
 });

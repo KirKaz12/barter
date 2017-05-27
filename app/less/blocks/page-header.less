@@ -331,7 +331,10 @@
 		}
 	}
 }
-.my_posts .page-header__about {
+.my_posts .page-header__about,
+.my_messages .page-header__about,
+.my_dialog .page-header__about,
+.edit_profile .page-header__about {
 	h2 {
 		padding-top: 50px;
 	}
@@ -680,7 +683,8 @@ body.about,
 body.help,
 body.post,
 body.my_posts,
-body.my_messages {
+body.my_messages,
+body.my_dialog {
 	.page-header__personal-messages {
 		display: inline-block;
 	}

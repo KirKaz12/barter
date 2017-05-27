@@ -1,0 +1,378 @@
+.edit-profile {
+	padding-top: 18px;
+	&__wrapper {
+		.wrapper(1200px);
+		padding: 0 16px;
+	}
+	&__content {
+		width: 66.1%;
+		margin: 0 auto;
+		h3 {
+			font-size: 15px;
+			margin-bottom: 15px;
+		}
+		&-profile-edit {
+			background-color: #f4f4f7;
+			border: 1px solid #e6e6e6;
+		}
+		&-input {
+			.post-input();
+		}
+		&-profile {
+			&-wrapper {
+				width: 80%;
+				margin: 0 auto;
+				padding: 0 20px;
+				padding-top: 31px;
+				padding-bottom: 16px;
+			}
+			&-edit {
+				margin-bottom: 38px;
+			}
+			&-photos {
+				padding-bottom: 15px;
+				border-bottom: 1px solid #e6e6e6;
+				margin-bottom: 12px;
+				p.label {
+					margin-bottom: 8px;
+				}
+			}
+			&-photos-content {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			&-photos-icon {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				line-height: 79px;
+				background-color: #e6e6e6;
+				margin-right: 20px;
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+				svg {
+					width: 46px;
+					height: 66px;
+					display: inline-block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			&-photos-description {
+				display: flex;
+				flex-direction: column;
+				width: 245px;
+				p.label {
+					margin-bottom: 10px;
+					line-height: 18px;
+					font-size: 12px;
+				}
+			}
+			&-photos-label {
+				cursor: pointer;
+				span {
+					font-size: 15px;
+					font-weight: 700;
+					padding-left: 30px;
+					position: relative;
+					&::before {
+						top: 0;
+						left: 0;
+						content: '';
+						position: absolute;
+						display: block;
+						width: 21px;
+						height: 21px;
+						background-image: url(../img/svg/download.svg);
+					}
+				}
+			}
+		}
+		&-user {
+			&-name-info {
+				font-size: 0;
+				margin-bottom: 15px;
+			}
+			&-name {
+				font-size: 13px;
+				display: inline-block;
+				vertical-align: top;
+				width: 277px;
+				margin-right: 20px;
+			}
+			&-surname {
+				font-size: 13px;
+				display: inline-block;
+				vertical-align: top;
+				width: 277px;
+			}
+			&-location {
+				&-info {
+					font-size: 0;
+					margin-bottom: 15px;
+					.cs-skin-border {
+						width: 100% !important;
+					}
+				}
+				&-city {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+					margin-right: 20px;
+				}
+				&-district {
+					font-size: 13px;
+					display: inline-block;
+					vertical-align: top;
+					width: 277px;
+				}
+			}
+			&-number {
+				font-size: 0;
+				margin-bottom: 35px;
+				p.label {
+					font-size: 13px;
+				}
+				.number-input {
+					display: inline-block;
+					position: relative;
+					&::after {
+						position: absolute;
+						content: '';
+						display: block;
+				    top: 15px;
+				    right: 35px;
+						width: 14px;
+						height: 14px;
+						background-image: url(../img/svg/pencil.svg);
+					}
+				}
+				&-confirm {
+					padding-left: 27px;
+					position: relative;
+					font-size: 13px;
+					display: inline-block;
+					&::before {
+						position: absolute;
+						content: '';
+						display: block;
+						top: 5px;
+						left: 0;
+						width: 17px;
+						height: 17px;
+					}
+				}
+				span[data-number-confirm="true"] {
+					&::before {
+						background-image: url(../img/svg/check_green.svg);
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+		&-password {
+			&-wrapper {
+				width: 80%;
+				margin: 0 auto;
+				padding: 31px 20px;
+				font-size: 0;
+				padding-bottom: 14px;
+				p.label {
+					font-size: 13px;
+				}
+			}
+			&-edit {
+				background-color: #f4f4f7;
+				border: 1px solid #e6e6e6;
+				margin-bottom: 40px;
+			}
+		}
+		&-current-password {
+			margin-bottom: 15px;
+		}
+		&-new-password {
+			width: 277px;
+			display: inline-block;
+			margin-right: 20px;
+			font-size: 13px;
+		}
+		&-confirm-password {
+			width: 277px;
+			display: inline-block;
+			font-size: 13px;
+		}
+		&-email {
+			&-edit {
+				background-color: #f4f4f7;
+				border: 1px solid #e6e6e6;
+				margin-bottom: 40px;
+				&-wrapper {
+					width: 80%;
+					margin: 0 auto;
+					padding: 33px 20px;
+					padding-bottom: 18px;
+					font-size: 0;
+					p.label {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+		&-current-email {
+			width: 277px;
+			display: inline-block;
+			margin-right: 20px;
+			font-size: 13px;
+		}
+		&-new-email {
+			width: 277px;
+			display: inline-block;
+			font-size: 13px;
+		}
+	}
+	&__password {
+		&-change-btn {
+			.blue-btn();
+			width: 225px;
+			height: 44px;
+			margin-top: 35px;
+			font-size: 14px;
+		}
+	}
+	&__email {
+		&-change-btn {
+			.blue-btn();
+			width: 225px;
+			height: 44px;
+			margin-top: 35px;
+			font-size: 14px;
+		}
+	}
+	&__save-btn {
+		.blue-btn();
+		width: 225px;
+		height: 44px;
+	}
+}
+
+#profile-photos-upload {
+		display: none;
+	}
+#profile-user-number {
+	width: 277px;
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 13px;
+}
+#current-password {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 1279px) {
+	.edit-profile {
+		&__wrapper {
+			width: 92.5%;
+			max-width: 900px;
+		}
+		&__save-btn,
+		&__password-change-btn,
+		&__email-change-btn {
+			width: 100%;
+		}
+		&__content {
+			width: 100%;
+			&-user {
+				&-name {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				&-surname {
+					width: 100%;
+					margin-right: 0;
+				}
+				&-number {
+					position: relative;
+					.number-input {
+						display: block;
+						width: 100%;
+					}
+					&-confirm {
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+				&-location {
+					&-city {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+					&-district {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+				}
+			}
+			&-profile {
+				&-photos {
+					&-content {
+						flex-direction: column;
+					}
+					&-icon {
+						align-self: center;
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+				}
+			}
+			&-new-password {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			&-confirm-password {
+				width: 100%;
+			}
+			&-current-email {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			&-new-email {
+				width: 100%;
+			}
+		}
+		#profile-user-number {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.edit-profile {
+		&__wrapper {
+	    max-width: 500px;
+	    padding: 0;
+		}
+		&__content {
+			&-profile {
+				&-wrapper {
+					width: 100%;
+				}
+			}
+			&-password-wrapper {
+				width: 100%;
+			}
+			&-email-edit-wrapper {
+				width: 100%;
+			}
+		}
+	}
+}

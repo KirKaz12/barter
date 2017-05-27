@@ -1,0 +1,263 @@
+.my-chat {
+	&__wrapper {
+		.wrapper(1200px);
+		padding: 0 16px;	
+	}
+	&__content {
+		width: 86.56%;
+		margin: 15px auto;
+		padding: 0 20px;
+		&-header {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+		&-back-link {
+			line-height: 29px;
+			color: @grey;
+		}
+		&-dialog {
+			border: 1px solid #e6e6e6;
+			background-color: #f4f4f7;
+			padding: 20px 20px;
+			padding-bottom: 34px;
+			&-participant {
+				display: flex;
+				align-items: center;
+				border-bottom: 1px solid #e6e6e6;
+				padding-bottom: 12px;
+				margin-bottom: 30px;
+				&-logo {
+					img {
+						width: 61px;
+						height: 61px;
+					}
+				}
+				&-details {
+					flex-grow: 2;
+					text-align: center;
+					align-self: flex-start;
+				}
+				&-name {
+					font-weight: 700;
+					font-size: 15px;
+			    margin-bottom: 2px;
+			    padding-top: 6px;
+				}
+				&-theme {
+					line-height: 21px;
+					color: @grey;
+					display: block;
+					&:hover {
+						color: @red;
+					}
+				}
+			}
+			&-messages {
+				.clearfix();
+				padding: 0 12px;
+				overflow-y: auto;
+				max-height: 500px;
+			}
+			&-msg {
+				position: relative;
+				padding-top: 12px;
+				padding-left: 20px;
+				padding-right: 35px;
+				padding-bottom: 17px;
+				font-size: 14px;
+				border-radius: 5px;
+				box-shadow: 0 0 30px rgba(205, 205, 205, 0.5);
+				&::before {
+					position: absolute;
+					content: '';
+					display: block;
+				}
+				&-date {
+					font-size: 12px;
+					color: @grey;
+					margin-bottom: 10px;
+				}
+			}
+			&-reply {
+				float: left;
+				width: 60%;
+				margin-bottom: 4px;
+				&-text {
+					color: #3d3d3d;
+					background-color: #fff;
+					&::before {
+						border-top: 8px solid transparent;
+					  border-bottom: 8px solid transparent; 
+					  border-right: 12px solid white; 
+						left: 0;
+						top: 16px;
+						transform: translateX(-12px);
+					}
+				}
+			}
+			&-my-message {
+				float: right;
+				width: 60%;
+				margin-bottom: 4px;
+				&-text {
+					color: #fff;
+					background-color: #6998ca;
+					&::before {
+						border-top: 8px solid transparent;
+					  border-bottom: 8px solid transparent; 
+					  border-left: 12px solid #6998ca;
+					  right: 0;
+					  top: 16px;
+					  transform: translateX(12px);
+					}
+				}
+				&-date {
+					text-align: right;
+				}
+			}
+		}
+	}
+	&__delete-btn {
+		position: relative;
+		padding-left: 28px;
+		line-height: 28px;
+		margin-left: auto;
+		background: transparent;
+		cursor: pointer;
+		font: inherit;
+		&:focus {
+			outline: none;
+		}
+		svg {
+			width: 17px;
+			height: 17px;
+			position: absolute;
+			left: 0;
+			top: 7px;
+			transition: opacity .15s;
+		}
+		svg.hover {
+			opacity: 0;
+		}
+		&:hover {
+			svg {
+				opacity: 0;
+			}
+			svg.hover {
+				opacity: 1;
+			}
+		}
+	}
+	&__message {
+		&-form {
+			position: relative;
+		}
+		&-text {
+			font-size: 14px;
+			color: @grey;
+			padding: 0 20px;
+			padding-top: 23px;
+	    padding-bottom: 4px;
+			width: 100%;
+			min-height: 60px;
+			resize: none;
+		/* 	line-height: 30px; */
+			background-color: white;
+			border: 1px solid #e6e6e6;
+			border-top: none;
+			&::placeholder {
+				font: inherit;
+				/* line-height: 30px; */
+			}
+			&:active,
+			&:focus {
+				outline: none;
+			}
+		}
+		&-send-btn {
+			position: absolute;
+			display: block;
+			.blue-btn();
+			width: 114px;
+			height: 44px;
+			top: 8px;
+			right: 10px;
+			svg {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.my-chat {
+		&__wrapper {
+			width: 92.5%;
+			max-width: 900px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.my-chat {
+		&__wrapper {
+			max-width: 500px;
+			padding: 0;
+		}
+		&__content {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			&-dialog {
+				&-participant {
+					&-details {
+						flex-grow: 0;
+						margin-left: 23px;
+						max-width: 65%;
+					}
+					&-name {
+						width: 100%;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						font-size: 15px;
+						text-align: left;
+					}
+					&-theme {
+						width: 100%;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						font-size: 13px;
+						line-height: 21px;
+						text-align: left;
+					}
+				}
+				&-reply {
+					width: 100%;
+				}
+				&-my-message {
+					width: 100%;
+				}
+			}
+		}
+		&__message {
+			&-send-btn {
+				width: 54px;
+				height: 44px;
+				font-size: 0;
+				svg {
+					display: inline-block;
+					width: 28px;
+					height: 22px;
+					vertical-align: middle;
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}

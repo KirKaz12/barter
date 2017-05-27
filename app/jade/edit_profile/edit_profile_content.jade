@@ -1,0 +1,71 @@
+section.edit-profile
+	.edit-profile__wrapper
+		.edit-profile__content
+			h3 Редактировать профиль
+			.edit-profile__content-profile-edit
+				.edit-profile__content-profile-wrapper
+					form(action="")
+						.edit-profile__content-profile-photos
+							p.label Фото:
+							.edit-profile__content-profile-photos-content
+								.edit-profile__content-profile-photos-icon
+									+icon("user_photo")
+								.edit-profile__content-profile-photos-description
+									p.label Рекомендуемый размер для корректного отображения — 160х160
+									label.edit-profile__content-profile-photos-label
+										input(type="file")#profile-photos-upload.edit-profile__content-profile-input
+										span Загрузить фото
+						.edit-profile__content-user-name-info
+							.edit-profile__content-user-name
+								p.label Имя:
+								input(type="text")#profile-user-name.edit-profile__content-input
+							.edit-profile__content-user-surname
+								p.label Фамилия:
+								input(type="text")#profile-user-surname.edit-profile__content-input
+						.edit-profile__content-user-location-info
+							.edit-profile__content-user-location-city
+								p.label Город:
+								select#profile-user-city.cs-select.cs-skin-border(name="user-city")
+									option(value="" disabled selected) - Не выбрано - 
+									option(value="") Москва
+									option(value="") Санкт-Петербург
+									option(value="") Казань
+									option(value="") Новосибирск
+							.edit-profile__content-user-location-district
+								p.label Район:
+								select#profile-user-district.cs-select.cs-skin-border(name="user-district")
+									option(value="" disabled selected) - Не выбрано - 
+									option(value="") Кировский
+									option(value="") Московский
+									option(value="") Вахитовский
+									option(value="") Приволжский
+						.edit-profile__content-user-number
+							p.label Телефон:
+							.number-input
+								input(type="text" data-confirm-input="phone" value="+7 (917) 850-00-00")#profile-user-number.edit-profile__content-input
+							span.edit-profile__content-user-number-confirm(data-number-confirm="true") Подтверждён
+						button.edit-profile__save-btn Сохранить
+			h3 Смена пароля
+			.edit-profile__content-password-edit
+				.edit-profile__content-password-wrapper
+					form(action="")
+						.edit-profile__content-current-password
+							p.label Текущий пароль:
+							input(type="text")#current-password.edit-profile__content-input
+						.edit-profile__content-new-password
+							p.label Новый пароль:
+							input(type="text")#new-password.edit-profile__content-input
+						.edit-profile__content-confirm-password
+							p.label Повторите пароль:
+							input(type="text")#confirm-password.edit-profile__content-input
+						button.edit-profile__password-change-btn Изменить
+			h3 Изменить e-mail
+			.edit-profile__content-email-edit
+				.edit-profile__content-email-edit-wrapper
+					.edit-profile__content-current-email
+							p.label Текущий e-mail:
+							input(type="text")#current-email.edit-profile__content-input
+					.edit-profile__content-new-email
+							p.label Новый e-mail:
+							input(type="text")#new-email.edit-profile__content-input
+					button.edit-profile__email-change-btn Изменить

@@ -1,0 +1,24 @@
+section.my-chat
+	.my-chat__wrapper
+		.my-chat__content
+			.my-chat__content-header
+				a.my-chat__content-back-link(href="#") Вернуться назад
+				button.my-chat__delete-btn #[+icon("trash")] #[+icon("trash_hover","hover")] Удалить
+			.my-chat__content-dialog
+				.my-chat__content-dialog-participant
+					.my-chat__content-dialog-participant-logo
+						img(src="img/avatars/pushkin.png", alt="")
+					.my-chat__content-dialog-participant-details
+						p.my-chat__content-dialog-participant-name Александр Пушкин
+						a.my-chat__content-dialog-participant-theme(href="#") Новые бордовые кеды Vans Old School
+				.my-chat__content-dialog-messages
+					.my-chat__content-dialog-reply
+						p.my-chat__content-dialog-reply-date.my-chat__content-dialog-msg-date 27 апреля 11:34
+						p.my-chat__content-dialog-reply-text.my-chat__content-dialog-msg Привет! Увидел Ваше объявление, скажите пожалуйста, предложение ещё актуально?
+					.my-chat__content-dialog-my-message
+						p.my-chat__content-dialog-my-message-date.my-chat__content-dialog-msg-date 27 апреля 15:00
+						p.my-chat__content-dialog-my-message-text.my-chat__content-dialog-msg Привет! Да, актуально!
+			.my-chat__message-form
+				form(action="")
+					textarea(placeholder="Написать сообщение...").my-chat__message-text
+					button.my-chat__message-send-btn #[+icon("send")] #[span Отправить]
