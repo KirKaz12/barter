@@ -256,6 +256,21 @@ $(document).ready(function() {
 			$(this).text("Показать все")
 		}	
 	});
+
+	const popUpTrigger = $("[data-trigger='pop-up_link']");
+	const popUpList = $("[data-trigger='pop-up_list']");
+	$('body').on("click", (e)=>{
+		
+		let parent = $(e.target).parents("[data-trigger='pop-up_link']");
+		if( ($(e.target).is(popUpTrigger)
+						|| parent.length !== 0)
+			) {
+			e.preventDefault();
+			popUpList.css("display") === "none" ? popUpList.show() : popUpList.hide()
+		}
+		else
+			popUpList.hide()
+	})
 });
 
 

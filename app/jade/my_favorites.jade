@@ -1,0 +1,22 @@
+extends source/page-template
+
+block styles
+	+link("css/magnific-popup")
+	+link("css/style")
+block title
+	title Меняю на
+block body
+	+body("my_favorites")
+block content
+	include my_favorites/page-header
+	main(class="my_favorites-main")
+		include my_favorites/my_favorites_content
+	include my_favorites/page-footer
+block scripts
+	//- +script("libs/jquery.min.js")
+	//- +script("libs/component.selectfx.js")
+	//- +script("libs/jquery.magnific-popup.min.js")
+	//- +script("js/common.js")
+	+script("js/libs.min.js")
+	+script("js/common.min.js")
+	

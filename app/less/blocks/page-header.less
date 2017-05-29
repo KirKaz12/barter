@@ -81,12 +81,43 @@
 		display: none;
 	}
 	&__personal-menu {
+		position: relative;
+		z-index: 1000;
 		width: 400px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		&_mob {
 			display: none;
+		}
+		&-pop-up {
+			display: none;
+			min-height: 174px;
+			background-color: #fff;
+			padding: 15px 10px;
+			position: absolute;
+			top: calc(100%+10px);
+			bottom: 0;
+			border: 2px solid #e6e6e6;
+			box-shadow: 0 0 30px #cdcdcd;
+			width: 204px;
+			&-item {
+				line-height: 29px;
+				color: #3d3d3d;
+				padding-left: 10px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				transition: color .01s, background-color .1s;
+				&:hover {
+					background-color: @blue;
+					color: #fff;
+				}
+			}
+			&-link {
+				font: inherit;
+				color: inherit;
+			}
 		}
 	}
 	&__login-link {
@@ -322,6 +353,7 @@
 		h2 {
 			text-align: center;
 			.font(22px, 24px, 700);
+			font-family: "Open Sans Bold",sans-serif;
 			padding-top: 65px;
 		}
 		p {
@@ -335,6 +367,7 @@
 .my_posts .page-header__about,
 .my_messages .page-header__about,
 .my_dialog .page-header__about,
+.my_favorites .page-header__about,
 .edit_profile .page-header__about {
 	h2 {
 		padding-top: 50px;

@@ -1,0 +1,18 @@
+section.my-favorite-posts
+	.my-favorite-posts__wrapper
+		.my-favorite-posts__titles
+			h3 Название: 1000
+			h3 Название: 2000
+			h3 Название: 3000
+		.my-favorite-posts__tab
+			.my-favorite-posts__tab-btn-group
+				a(href="#").my-favorite-posts__tab-btn Я продаю
+				a(href="#").my-favorite-posts__tab-btn.my-favorite-posts__tab-btn_active Хочу купить
+			.my-favorite-posts__tab-content
+				.my-favorite-posts__tab-content-header
+					span.my-favorite-posts__active-posts Отобранные объявления #[span.active-posts-counter 3] 
+					a(href="#").my-favorite-posts__send-post Список всех объявлений
+				ul.my-favorite-posts__posts-list
+					+my_favorite_poster("keds","Новые бордовые кеды Vans old school","1450","5 шт.")
+					+my_favorite_poster("keds","Новые бордовые кеды Vans old school","1450","5 шт.")
+					+my_favorite_poster("keds","Новые бордовые кеды Vans old school","1450","5 шт.")

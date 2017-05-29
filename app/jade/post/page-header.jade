@@ -39,11 +39,23 @@ header.page-header
 					span.page-header__personal-messages-icon
 						+icon("message")
 					span.page-header__personal-messages-count 1
-				a.page-header__login-link(href="#") 
+				a.page-header__login-link(href="#" data-trigger="pop-up_link") 
 					span.page-header__login-link-icon
 						+icon("user")
 					span.page-header__login-link-text deadpool@gmail.com
-			a.page-header__request-btn(type="button")
+				ul.page-header__personal-menu-pop-up(data-trigger="pop-up_list")
+					li.page-header__personal-menu-pop-up-item
+						a(href="#").page-header__personal-menu-pop-up-link Я продаю
+					li.page-header__personal-menu-pop-up-item
+						a(href="#").page-header__personal-menu-pop-up-link Хочу купить
+					li.page-header__personal-menu-pop-up-item
+						a(href="#").page-header__personal-menu-pop-up-link Мои сообщения
+					li.page-header__personal-menu-pop-up-item
+						a(href="#").page-header__personal-menu-pop-up-link Редактировать профиль
+					li.page-header__personal-menu-pop-up-item
+						a(href="#").page-header__personal-menu-pop-up-link Выход
+
+			a.page-header__request-btn(href="#")
 				+icon("plus")
 				span Подать объявление 
 	section.page-header__search

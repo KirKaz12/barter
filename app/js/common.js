@@ -232,4 +232,15 @@ $(document).ready(function () {
 			$(this).text("Показать все");
 		}
 	});
+
+	var popUpTrigger = $("[data-trigger='pop-up_link']");
+	var popUpList = $("[data-trigger='pop-up_list']");
+	$('body').on("click", function (e) {
+
+		var parent = $(e.target).parents("[data-trigger='pop-up_link']");
+		if ($(e.target).is(popUpTrigger) || parent.length !== 0) {
+			e.preventDefault();
+			popUpList.css("display") === "none" ? popUpList.show() : popUpList.hide();
+		} else popUpList.hide();
+	});
 });

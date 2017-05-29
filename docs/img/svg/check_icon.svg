@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="11" height="8" viewBox="0 0 11 8"><defs><style>.cls-1{fill:#fff;fill-rule:evenodd}</style></defs><path d="M10.952 1.191l-6.82 6.762a.155.155 0 0 1-.217 0L.043 4.113a.15.15 0 0 1 0-.215l.941-.933a.155.155 0 0 1 .217 0l2.823 2.799L9.794.043a.155.155 0 0 1 .217 0l.941.933a.15.15 0 0 1 0 .215z" class="cls-1"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="11" height="8" viewBox="0 0 11 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path d="M10.952,1.191 L4.132,7.953 C4.072,8.012 3.975,8.012 3.915,7.953 L0.043,4.113 C-0.017,4.054 -0.017,3.958 0.043,3.898 L0.984,2.965 C1.044,2.906 1.141,2.906 1.201,2.965 L4.024,5.764 L9.794,0.043 C9.854,-0.016 9.951,-0.016 10.011,0.043 L10.952,0.976 C11.012,1.035 11.012,1.132 10.952,1.191 Z" class="cls-1"/>
+</svg>
