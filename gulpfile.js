@@ -46,7 +46,7 @@ gulp.task('jade', function() {
                 gutil.log(error.message); //Продолжаем watch после ошибки
                 this.emit('end');
         }))
-        .pipe(jade()) 
+        .pipe(jade({pretty: true})) 
         .pipe(gulp.dest('app')) 
 });
 //Перезагрузка после изменения  .jade
@@ -63,7 +63,7 @@ gulp.task('less', function() {
         }))
 		.pipe(less())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) 
-		.pipe(cssnano())
+		//.pipe(cssnano())
     .pipe(gulp.dest('app/css/')) 
 		.pipe(browserSync.reload({stream: true}))
 });
